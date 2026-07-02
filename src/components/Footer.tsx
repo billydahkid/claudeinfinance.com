@@ -3,6 +3,7 @@ import { BookOpen } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { categories } from "@/data/skills";
 import type { Locale } from "@/i18n/routing";
+import NewsletterSignup from "./NewsletterSignup";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -21,8 +22,12 @@ export default function Footer() {
               </span>
             </div>
             <p className="prose-serif mt-3 max-w-sm text-sm text-ink-muted">
-              {t("tagline")}
+              {t("tagline")} {t("editedBy")}{" "}
+              <span className="font-medium text-ink-soft">{'[""]'}</span>.
             </p>
+            <div className="mt-8">
+              <NewsletterSignup />
+            </div>
           </div>
 
           <div>

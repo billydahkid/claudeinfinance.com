@@ -78,7 +78,15 @@
     "empty": "No skill in this category yet."
   },
   "footer": {
-    "tagline": "The directory of Claude agent use cases in finance.",
+    "tagline": "The independent directory of Claude agent use cases for finance.",
+    "editedBy": "Edited by",
+    "newsletter": {
+      "label": "Weekly newsletter",
+      "placeholder": "you@company.com",
+      "subscribe": "Subscribe",
+      "hint": "One skill unpacked every Friday. Unsubscribe in one click.",
+      "success": "Thanks, your subscription has been recorded."
+    },
     "disclaimer": "Independent project, not affiliated with Anthropic. Not affiliated with Anthropic.",
     "sections": {
       "explore": "Explore",

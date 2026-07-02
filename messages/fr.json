@@ -78,7 +78,15 @@
     "empty": "Aucun skill dans cette categorie pour le moment."
   },
   "footer": {
-    "tagline": "L'annuaire des cas d'usage des agents Claude en finance.",
+    "tagline": "L'annuaire independant des cas d'usage des agents Claude pour la finance.",
+    "editedBy": "Edite par",
+    "newsletter": {
+      "label": "Newsletter hebdomadaire",
+      "placeholder": "vous@societe.com",
+      "subscribe": "S'abonner",
+      "hint": "Un skill decortique chaque vendredi. Desabonnement en un clic.",
+      "success": "Merci, votre inscription est prise en compte."
+    },
     "disclaimer": "Projet independant, non affilie a Anthropic. Not affiliated with Anthropic.",
     "sections": {
       "explore": "Explorer",
