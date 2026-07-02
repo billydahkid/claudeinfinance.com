@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "ClaudeInFinance - Cas d'usage des agents IA en finance",
+    "description": "L'annuaire des skills et prompts Claude pour les metiers de la finance : M&A, private equity, venture capital, marches, controle de gestion, audit, risque et data."
+  },
+  "header": {
+    "brand": "ClaudeInFinance",
+    "nav": {
+      "categories": "Categories",
+      "skills": "Skills",
+      "about": "A propos"
+    },
+    "explore": "Explorer",
+    "language": "Langue"
+  },
+  "hero": {
+    "badge": "Non affilie a Anthropic",
+    "title": "Les agents Claude au service de la finance",
+    "subtitle": "Un annuaire de skills et de prompts prets a l'emploi pour les metiers de la finance. Trouvez le bon cas d'usage, copiez le prompt, gagnez du temps.",
+    "ctaPrimary": "Explorer les skills",
+    "ctaSecondary": "Voir les categories",
+    "stats": {
+      "skills": "skills prets a l'emploi",
+      "categories": "categories metiers",
+      "languages": "langues"
+    }
+  },
+  "categories": {
+    "title": "Categories metiers",
+    "subtitle": "Parcourez les cas d'usage par metier de la finance.",
+    "explore": "Voir les skills",
+    "countSkills": "{count, plural, =0 {aucun skill} one {# skill} other {# skills}}"
+  },
+  "featured": {
+    "title": "Skills a la une",
+    "subtitle": "Une selection de cas d'usage plebiscites par les equipes finance."
+  },
+  "explorer": {
+    "title": "Explorer tous les skills",
+    "subtitle": "Recherchez par mot cle et filtrez par categorie.",
+    "searchPlaceholder": "Rechercher un skill, un tag, un mot cle...",
+    "all": "Tous",
+    "resultsCount": "{count, plural, =0 {Aucun resultat} one {# skill trouve} other {# skills trouves}}",
+    "empty": "Aucun skill ne correspond a votre recherche.",
+    "reset": "Reinitialiser"
+  },
+  "about": {
+    "title": "A propos",
+    "body": "ClaudeInFinance recense des cas d'usage des agents IA pour la finance. Chaque skill decrit un objectif metier et fournit un prompt structure a copier dans Claude. L'objectif est simple : aider les analystes, controleurs, auditeurs et investisseurs a tirer parti des agents IA dans leur quotidien.",
+    "disclaimer": "Ce site est un projet independant, non affilie a Anthropic. Claude est une marque d'Anthropic."
+  },
+  "skill": {
+    "backToHome": "Retour a l'accueil",
+    "category": "Categorie",
+    "tags": "Tags",
+    "promptTitle": "Prompt a copier",
+    "promptHint": "Copiez ce prompt et collez le dans Claude pour demarrer.",
+    "copy": "Copier le prompt",
+    "copied": "Copie !",
+    "related": "Skills similaires"
+  },
+  "category": {
+    "backToHome": "Retour a l'accueil",
+    "skillsTitle": "Skills de cette categorie",
+    "empty": "Aucun skill dans cette categorie pour le moment."
+  },
+  "footer": {
+    "tagline": "L'annuaire des cas d'usage des agents Claude en finance.",
+    "disclaimer": "Projet independant, non affilie a Anthropic. Not affiliated with Anthropic.",
+    "sections": {
+      "explore": "Explorer",
+      "categories": "Categories"
+    },
+    "rights": "Tous droits reserves."
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "body": "La page que vous cherchez n'existe pas ou a ete deplacee.",
+    "cta": "Retour a l'accueil"
+  }
+}

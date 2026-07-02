@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "ClaudeInFinance - AI agent use cases for finance",
+    "description": "The directory of Claude skills and prompts for finance jobs: M&A, private equity, venture capital, markets, management control, audit, risk and data."
+  },
+  "header": {
+    "brand": "ClaudeInFinance",
+    "nav": {
+      "categories": "Categories",
+      "skills": "Skills",
+      "about": "About"
+    },
+    "explore": "Explore",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "Not affiliated with Anthropic",
+    "title": "Claude agents at work in finance",
+    "subtitle": "A directory of ready to use skills and prompts for finance jobs. Find the right use case, copy the prompt, save time.",
+    "ctaPrimary": "Explore the skills",
+    "ctaSecondary": "See the categories",
+    "stats": {
+      "skills": "ready to use skills",
+      "categories": "job categories",
+      "languages": "languages"
+    }
+  },
+  "categories": {
+    "title": "Job categories",
+    "subtitle": "Browse use cases by finance job.",
+    "explore": "View skills",
+    "countSkills": "{count, plural, =0 {no skills} one {# skill} other {# skills}}"
+  },
+  "featured": {
+    "title": "Featured skills",
+    "subtitle": "A selection of use cases loved by finance teams."
+  },
+  "explorer": {
+    "title": "Explore all skills",
+    "subtitle": "Search by keyword and filter by category.",
+    "searchPlaceholder": "Search a skill, a tag, a keyword...",
+    "all": "All",
+    "resultsCount": "{count, plural, =0 {No results} one {# skill found} other {# skills found}}",
+    "empty": "No skill matches your search.",
+    "reset": "Reset"
+  },
+  "about": {
+    "title": "About",
+    "body": "ClaudeInFinance lists AI agent use cases for finance. Each skill describes a business goal and provides a structured prompt to copy into Claude. The goal is simple: help analysts, controllers, auditors and investors get the most out of AI agents in their daily work.",
+    "disclaimer": "This site is an independent project, not affiliated with Anthropic. Claude is a trademark of Anthropic."
+  },
+  "skill": {
+    "backToHome": "Back to home",
+    "category": "Category",
+    "tags": "Tags",
+    "promptTitle": "Prompt to copy",
+    "promptHint": "Copy this prompt and paste it into Claude to get started.",
+    "copy": "Copy prompt",
+    "copied": "Copied!",
+    "related": "Related skills"
+  },
+  "category": {
+    "backToHome": "Back to home",
+    "skillsTitle": "Skills in this category",
+    "empty": "No skill in this category yet."
+  },
+  "footer": {
+    "tagline": "The directory of Claude agent use cases in finance.",
+    "disclaimer": "Independent project, not affiliated with Anthropic. Not affiliated with Anthropic.",
+    "sections": {
+      "explore": "Explore",
+      "categories": "Categories"
+    },
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you are looking for does not exist or has been moved.",
+    "cta": "Back to home"
+  }
+}
