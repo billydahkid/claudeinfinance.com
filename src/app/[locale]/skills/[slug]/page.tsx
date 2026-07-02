@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ChevronRight, Sparkles, ArrowUpRight } from "lucide-react";
+import { ChevronRight, Github, ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import {
@@ -9,6 +9,7 @@ import {
   getSkill,
   getCategory,
   getSkillsByCategory,
+  REPO_URL,
 } from "@/data/skills";
 import CopyPromptButton from "@/components/CopyPromptButton";
 import SkillCard from "@/components/SkillCard";
@@ -105,16 +106,16 @@ export default async function SkillPage({
             </pre>
           </div>
 
-          {/* Secondary action, mirroring the "voir le depot source" button */}
+          {/* Secondary action: link to the source repository */}
           <a
-            href="https://claude.ai/new"
+            href={skill.sourceUrl ?? REPO_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="group mt-3 flex items-center justify-between rounded-card border border-line bg-cream-100/60 px-4 py-3 transition-colors hover:border-terracotta-light hover:bg-cream-100"
           >
             <span className="flex items-center gap-2 text-sm font-medium text-ink">
-              <Sparkles className="h-4 w-4 text-terracotta" />
-              {t("openInClaude")}
+              <Github className="h-4 w-4 text-ink-soft" />
+              {t("viewSource")}
             </span>
             <ArrowUpRight className="h-4 w-4 text-ink-muted transition-colors group-hover:text-terracotta" />
           </a>
@@ -152,20 +153,47 @@ export default async function SkillPage({
               </dt>
               <dd className="uppercase text-ink-soft">{l}</dd>
             </div>
-            <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center justify-between gap-3 border-b border-line pb-2">
               <dt className="uppercase tracking-wide text-ink-muted">
                 {t("metaSlug")}
               </dt>
               <dd className="text-ink-soft">{skill.slug}</dd>
+            </div>
+            <div className="flex items-center justify-between gap-3">
+              <dt className="uppercase tracking-wide text-ink-muted">
+                {t("metaRepo")}
+              </dt>
+              <dd>
+                <a
+                  href={skill.sourceUrl ?? REPO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-terracotta hover:text-terracotta-dark"
+                >
+                  GitHub
+                </a>
+              </dd>
             </div>
           </dl>
         </aside>
       </div>
 
       {/* Related */}
-      {related.length > 0 && (
+      {related.length > 0 && category && (
         <div className="mt-16 border-t border-line pt-10">
-          <p className="eyebrow text-terracotta">{t("related")}</p>
+          <p className="eyebrow text-terracotta">{t("relatedEyebrow")}</p>
+          <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
+            <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+              {t("related", { category: category.name[l] })}
+            </h2>
+            <Link
+              href={`/categories/${category.slug}`}
+              className="inline-flex items-center gap-1 font-mono text-xs uppercase tracking-wide text-terracotta hover:text-terracotta-dark"
+            >
+              {t("relatedAll")}
+              <ChevronRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((s) => (
               <SkillCard key={s.slug} skill={s} locale={l} />

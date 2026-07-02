@@ -60,12 +60,15 @@
     "promptHint": "Copy this prompt and paste it into Claude to get started.",
     "copy": "Copy",
     "copied": "Copied!",
-    "openInClaude": "Open in Claude",
+    "viewSource": "View source repo",
     "metadata": "Metadata",
     "metaCategory": "Category",
     "metaLanguage": "Language",
     "metaSlug": "Slug",
-    "related": "Related skills"
+    "metaRepo": "Repo",
+    "relatedEyebrow": "Explore more",
+    "related": "Related skills in {category}",
+    "relatedAll": "Whole category"
   },
   "category": {
     "breadcrumbHome": "Library",

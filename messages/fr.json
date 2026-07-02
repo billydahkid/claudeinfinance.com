@@ -60,12 +60,15 @@
     "promptHint": "Copiez ce prompt et collez le dans Claude pour demarrer.",
     "copy": "Copier",
     "copied": "Copie !",
-    "openInClaude": "Ouvrir dans Claude",
+    "viewSource": "Voir le depot source",
     "metadata": "Metadonnees",
     "metaCategory": "Categorie",
     "metaLanguage": "Langue",
     "metaSlug": "Slug",
-    "related": "Skills similaires"
+    "metaRepo": "Depot",
+    "relatedEyebrow": "A explorer aussi",
+    "related": "Skills similaires dans {category}",
+    "relatedAll": "Toute la categorie"
   },
   "category": {
     "breadcrumbHome": "Bibliotheque",

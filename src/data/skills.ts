@@ -34,7 +34,12 @@ export type Skill = {
   tags: string[];
   featured?: boolean;
   prompt: Localized;
+  /** Link to the source repository for this skill. Falls back to REPO_URL. */
+  sourceUrl?: string;
 };
+
+/** Default source repository, used when a skill has no dedicated sourceUrl. */
+export const REPO_URL = "https://github.com/billydahkid/claudeinfinance.com";
 
 export const categories: Category[] = [
   {
