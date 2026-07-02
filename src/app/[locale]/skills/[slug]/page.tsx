@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Sparkles, ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import {
@@ -104,6 +104,21 @@ export default async function SkillPage({
               {skill.prompt[l]}
             </pre>
           </div>
+
+          {/* Secondary action, mirroring the "voir le depot source" button */}
+          <a
+            href="https://claude.ai/new"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-3 flex items-center justify-between rounded-card border border-line bg-cream-100/60 px-4 py-3 transition-colors hover:border-terracotta-light hover:bg-cream-100"
+          >
+            <span className="flex items-center gap-2 text-sm font-medium text-ink">
+              <Sparkles className="h-4 w-4 text-terracotta" />
+              {t("openInClaude")}
+            </span>
+            <ArrowUpRight className="h-4 w-4 text-ink-muted transition-colors group-hover:text-terracotta" />
+          </a>
+
           <p className="prose-serif mt-3 text-sm text-ink-muted">
             {t("promptHint")}
           </p>

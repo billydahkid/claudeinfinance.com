@@ -60,6 +60,7 @@
     "promptHint": "Copy this prompt and paste it into Claude to get started.",
     "copy": "Copy",
     "copied": "Copied!",
+    "openInClaude": "Open in Claude",
     "metadata": "Metadata",
     "metaCategory": "Category",
     "metaLanguage": "Language",
