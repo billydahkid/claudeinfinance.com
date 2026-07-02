@@ -23,7 +23,7 @@ export default function LocaleSwitcher() {
 
   return (
     <div
-      className="inline-flex items-center rounded-full border border-cream-200 bg-white p-0.5 text-sm font-medium"
+      className="inline-flex items-center rounded border border-line bg-cream-100/60 p-0.5 font-mono text-xs"
       role="group"
       aria-busy={isPending}
     >
@@ -36,10 +36,8 @@ export default function LocaleSwitcher() {
             onClick={() => change(l)}
             aria-current={active ? "true" : undefined}
             className={
-              "rounded-full px-3 py-1 uppercase transition-colors " +
-              (active
-                ? "bg-terracotta text-white"
-                : "text-ink-muted hover:text-ink")
+              "rounded px-2 py-1 uppercase tracking-wide transition-colors " +
+              (active ? "bg-ink text-cream" : "text-ink-muted hover:text-ink")
             }
           >
             {l}

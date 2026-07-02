@@ -14,33 +14,35 @@ export default function SkillCard({ skill, locale }: Props) {
   return (
     <Link
       href={`/skills/${skill.slug}`}
-      className="group flex h-full flex-col rounded-card border border-cream-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-terracotta-light hover:shadow-lg hover:shadow-terracotta/5"
+      className="group flex h-full flex-col rounded-card border border-line bg-cream-100/60 p-5 transition-colors hover:border-terracotta-light hover:bg-cream-100"
     >
       <div className="flex items-start justify-between gap-3">
         {category && (
-          <span className="inline-flex items-center rounded-full bg-cream-100 px-2.5 py-1 text-xs font-medium text-ink-soft">
+          <span className="eyebrow text-terracotta">
             {category.name[locale]}
           </span>
         )}
-        <ArrowUpRight className="h-5 w-5 shrink-0 text-ink-muted transition-colors group-hover:text-terracotta" />
+        <ArrowUpRight className="h-4 w-4 shrink-0 text-ink-muted transition-colors group-hover:text-terracotta" />
       </div>
 
-      <h3 className="mt-3 text-lg font-semibold leading-snug text-ink">
+      <h3 className="font-display mt-3 text-xl font-semibold leading-snug text-ink">
         {skill.name[locale]}
       </h3>
-      <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted">
+      <p className="prose-serif mt-2 flex-1 text-[0.95rem] leading-relaxed text-ink-soft">
         {skill.summary[locale]}
       </p>
 
-      <div className="mt-4 flex flex-wrap gap-1.5">
-        {skill.tags.slice(0, 4).map((tag) => (
-          <span
-            key={tag}
-            className="rounded-md bg-cream-100 px-2 py-0.5 text-xs text-ink-soft"
-          >
-            {tag}
-          </span>
-        ))}
+      <div className="mt-5 border-t border-line pt-3">
+        <div className="flex flex-wrap gap-1.5">
+          {skill.tags.slice(0, 3).map((tag) => (
+            <span
+              key={tag}
+              className="rounded border border-line px-1.5 py-0.5 font-mono text-[0.65rem] uppercase tracking-wide text-ink-muted"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     </Link>
   );

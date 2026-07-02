@@ -9,16 +9,14 @@ export default function CategoryGrid() {
   const locale = useLocale() as Locale;
 
   return (
-    <section id="categories" className="scroll-mt-20">
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <div className="max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-            {t("title")}
-          </h2>
-          <p className="mt-3 text-ink-soft">{t("subtitle")}</p>
-        </div>
+    <section id="categories" className="scroll-mt-16 border-b border-line">
+      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <p className="eyebrow text-terracotta">{t("title")}</p>
+        <h2 className="font-display mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+          {t("subtitle")}
+        </h2>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((category) => {
             const Icon = category.icon;
             const count = getSkillsByCategory(category.slug).length;
@@ -26,20 +24,26 @@ export default function CategoryGrid() {
               <Link
                 key={category.slug}
                 href={`/categories/${category.slug}`}
-                className="group flex flex-col rounded-card border border-cream-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-terracotta-light hover:shadow-lg hover:shadow-terracotta/5"
+                className="group flex flex-col rounded-card border border-line bg-cream-100/60 p-5 transition-colors hover:border-terracotta-light hover:bg-cream-100"
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-terracotta/10 text-terracotta transition-colors group-hover:bg-terracotta group-hover:text-white">
-                  <Icon className="h-6 w-6" />
-                </span>
-                <h3 className="mt-4 font-semibold text-ink">
+                <div className="flex items-center justify-between">
+                  <Icon
+                    className="h-6 w-6 text-terracotta"
+                    strokeWidth={1.75}
+                  />
+                  <span className="font-mono text-xs text-ink-muted">
+                    {t("countSkills", { count })}
+                  </span>
+                </div>
+                <h3 className="font-display mt-4 text-lg font-semibold text-ink">
                   {category.name[locale]}
                 </h3>
-                <p className="mt-1.5 flex-1 text-sm text-ink-muted">
+                <p className="prose-serif mt-1.5 flex-1 text-sm leading-relaxed text-ink-muted">
                   {category.description[locale]}
                 </p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-terracotta">
-                  {t("countSkills", { count })}
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                <span className="mt-4 inline-flex items-center gap-1 font-mono text-xs uppercase tracking-wide text-terracotta">
+                  {t("explore")}
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </span>
               </Link>
             );

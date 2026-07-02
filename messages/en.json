@@ -6,22 +6,22 @@
   "header": {
     "brand": "ClaudeInFinance",
     "nav": {
+      "home": "Home",
       "categories": "Categories",
-      "skills": "Skills",
+      "skills": "All skills",
       "about": "About"
     },
     "explore": "Explore",
     "language": "Language"
   },
   "hero": {
-    "badge": "Not affiliated with Anthropic",
-    "title": "Claude agents at work in finance",
+    "eyebrow": "The directory - finance edition",
+    "titleLine1": "Claude agents,",
+    "titleLine2": "built for finance.",
     "subtitle": "A directory of ready to use skills and prompts for finance jobs. Find the right use case, copy the prompt, save time.",
-    "ctaPrimary": "Explore the skills",
-    "ctaSecondary": "See the categories",
     "stats": {
-      "skills": "ready to use skills",
-      "categories": "job categories",
+      "skills": "skills",
+      "categories": "categories",
       "languages": "languages"
     }
   },
@@ -39,8 +39,9 @@
     "title": "Explore all skills",
     "subtitle": "Search by keyword and filter by category.",
     "searchPlaceholder": "Search a skill, a tag, a keyword...",
+    "filterByCategory": "Filter by category",
     "all": "All",
-    "resultsCount": "{count, plural, =0 {No results} one {# skill found} other {# skills found}}",
+    "resultsCount": "{count, plural, =0 {0 results} one {# result} other {# results}}",
     "empty": "No skill matches your search.",
     "reset": "Reset"
   },
@@ -50,18 +51,26 @@
     "disclaimer": "This site is an independent project, not affiliated with Anthropic. Claude is a trademark of Anthropic."
   },
   "skill": {
+    "breadcrumbHome": "Library",
     "backToHome": "Back to home",
     "category": "Category",
     "tags": "Tags",
-    "promptTitle": "Prompt to copy",
+    "note": "Editor's note",
+    "promptTitle": "Prompt",
     "promptHint": "Copy this prompt and paste it into Claude to get started.",
-    "copy": "Copy prompt",
+    "copy": "Copy",
     "copied": "Copied!",
+    "metadata": "Metadata",
+    "metaCategory": "Category",
+    "metaLanguage": "Language",
+    "metaSlug": "Slug",
     "related": "Related skills"
   },
   "category": {
+    "breadcrumbHome": "Library",
     "backToHome": "Back to home",
     "skillsTitle": "Skills in this category",
+    "count": "{count, plural, =0 {0 skills} one {# skill} other {# skills}}",
     "empty": "No skill in this category yet."
   },
   "footer": {
@@ -70,6 +79,11 @@
     "sections": {
       "explore": "Explore",
       "categories": "Categories"
+    },
+    "links": {
+      "skills": "All skills",
+      "categories": "Categories",
+      "about": "About"
     },
     "rights": "All rights reserved."
   },

@@ -6,22 +6,22 @@
   "header": {
     "brand": "ClaudeInFinance",
     "nav": {
+      "home": "Accueil",
       "categories": "Categories",
-      "skills": "Skills",
+      "skills": "Tous les skills",
       "about": "A propos"
     },
     "explore": "Explorer",
     "language": "Langue"
   },
   "hero": {
-    "badge": "Non affilie a Anthropic",
-    "title": "Les agents Claude au service de la finance",
+    "eyebrow": "L'annuaire - edition finance",
+    "titleLine1": "Les agents Claude,",
+    "titleLine2": "au service de la finance.",
     "subtitle": "Un annuaire de skills et de prompts prets a l'emploi pour les metiers de la finance. Trouvez le bon cas d'usage, copiez le prompt, gagnez du temps.",
-    "ctaPrimary": "Explorer les skills",
-    "ctaSecondary": "Voir les categories",
     "stats": {
-      "skills": "skills prets a l'emploi",
-      "categories": "categories metiers",
+      "skills": "skills",
+      "categories": "categories",
       "languages": "langues"
     }
   },
@@ -38,9 +38,10 @@
   "explorer": {
     "title": "Explorer tous les skills",
     "subtitle": "Recherchez par mot cle et filtrez par categorie.",
-    "searchPlaceholder": "Rechercher un skill, un tag, un mot cle...",
+    "searchPlaceholder": "Chercher un skill, un tag, un mot cle...",
+    "filterByCategory": "Filtrer par categorie",
     "all": "Tous",
-    "resultsCount": "{count, plural, =0 {Aucun resultat} one {# skill trouve} other {# skills trouves}}",
+    "resultsCount": "{count, plural, =0 {0 resultat} one {# resultat} other {# resultats}}",
     "empty": "Aucun skill ne correspond a votre recherche.",
     "reset": "Reinitialiser"
   },
@@ -50,18 +51,26 @@
     "disclaimer": "Ce site est un projet independant, non affilie a Anthropic. Claude est une marque d'Anthropic."
   },
   "skill": {
+    "breadcrumbHome": "Bibliotheque",
     "backToHome": "Retour a l'accueil",
     "category": "Categorie",
     "tags": "Tags",
-    "promptTitle": "Prompt a copier",
+    "note": "Note de la redaction",
+    "promptTitle": "Prompt",
     "promptHint": "Copiez ce prompt et collez le dans Claude pour demarrer.",
-    "copy": "Copier le prompt",
+    "copy": "Copier",
     "copied": "Copie !",
+    "metadata": "Metadonnees",
+    "metaCategory": "Categorie",
+    "metaLanguage": "Langue",
+    "metaSlug": "Slug",
     "related": "Skills similaires"
   },
   "category": {
+    "breadcrumbHome": "Bibliotheque",
     "backToHome": "Retour a l'accueil",
     "skillsTitle": "Skills de cette categorie",
+    "count": "{count, plural, =0 {0 skill} one {# skill} other {# skills}}",
     "empty": "Aucun skill dans cette categorie pour le moment."
   },
   "footer": {
@@ -70,6 +79,11 @@
     "sections": {
       "explore": "Explorer",
       "categories": "Categories"
+    },
+    "links": {
+      "skills": "Tous les skills",
+      "categories": "Categories",
+      "about": "A propos"
     },
     "rights": "Tous droits reserves."
   },

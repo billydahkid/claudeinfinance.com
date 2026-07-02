@@ -26,16 +26,16 @@ export default function CopyPromptButton({ prompt }: Props) {
     <button
       type="button"
       onClick={copy}
-      className="inline-flex items-center gap-2 rounded-full bg-terracotta px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-terracotta-dark"
+      className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wide text-cream/70 transition-colors hover:text-cream"
     >
       {copied ? (
         <>
-          <Check className="h-4 w-4" />
+          <Check className="h-3.5 w-3.5" />
           {t("copied")}
         </>
       ) : (
         <>
-          <Copy className="h-4 w-4" />
+          <Copy className="h-3.5 w-3.5" />
           {t("copy")}
         </>
       )}

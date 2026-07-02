@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowLeft, Tag } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import {
@@ -53,64 +53,104 @@ export default async function SkillPage({
     .slice(0, 3);
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
-      <Link
-        href="/"
-        className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-muted hover:text-terracotta"
-      >
-        <ArrowLeft className="h-4 w-4" />
-        {t("backToHome")}
-      </Link>
-
-      <div className="mt-6">
+    <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
+      {/* Breadcrumb */}
+      <nav className="flex flex-wrap items-center gap-1.5 font-mono text-xs uppercase tracking-wide text-ink-muted">
+        <Link href="/" className="hover:text-terracotta">
+          {t("breadcrumbHome")}
+        </Link>
+        <ChevronRight className="h-3.5 w-3.5" />
         {category && (
-          <Link
-            href={`/categories/${category.slug}`}
-            className="inline-flex items-center rounded-full bg-cream-100 px-3 py-1 text-xs font-medium text-ink-soft hover:text-terracotta"
-          >
-            {category.name[l]}
-          </Link>
+          <>
+            <Link
+              href={`/categories/${category.slug}`}
+              className="hover:text-terracotta"
+            >
+              {category.name[l]}
+            </Link>
+            <ChevronRight className="h-3.5 w-3.5" />
+          </>
         )}
-        <h1 className="mt-4 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+        <span className="text-ink-soft">{skill.slug}</span>
+      </nav>
+
+      {/* Title block */}
+      <div className="mt-8">
+        {category && (
+          <p className="eyebrow text-terracotta">{category.name[l]}</p>
+        )}
+        <h1 className="font-display mt-3 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           {skill.name[l]}
         </h1>
-        <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-          {skill.summary[l]}
-        </p>
-
-        <div className="mt-5 flex flex-wrap items-center gap-2">
-          <Tag className="h-4 w-4 text-ink-muted" />
-          {skill.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-md bg-cream-100 px-2 py-0.5 text-xs text-ink-soft"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
       </div>
 
-      <div className="mt-10 rounded-card border border-cream-200 bg-white p-6 sm:p-8">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <h2 className="text-lg font-semibold text-ink">
-              {t("promptTitle")}
-            </h2>
-            <p className="mt-1 text-sm text-ink-muted">{t("promptHint")}</p>
+      <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_18rem]">
+        {/* Main column */}
+        <div>
+          <p className="eyebrow text-terracotta">{t("note")}</p>
+          <p className="prose-serif mt-4 text-xl leading-relaxed text-ink">
+            {skill.summary[l]}
+          </p>
+
+          {/* Prompt box */}
+          <div className="mt-8 overflow-hidden rounded-card border border-ink/10 bg-ink">
+            <div className="flex items-center justify-between border-b border-white/10 px-4 py-2.5">
+              <span className="font-mono text-xs uppercase tracking-wide text-cream/60">
+                {t("promptTitle")}
+              </span>
+              <CopyPromptButton prompt={skill.prompt[l]} />
+            </div>
+            <pre className="prose-serif overflow-x-auto whitespace-pre-wrap px-5 py-5 text-[0.95rem] leading-relaxed text-cream/90">
+              {skill.prompt[l]}
+            </pre>
           </div>
-          <CopyPromptButton prompt={skill.prompt[l]} />
+          <p className="prose-serif mt-3 text-sm text-ink-muted">
+            {t("promptHint")}
+          </p>
         </div>
-        <pre className="mt-5 whitespace-pre-wrap rounded-xl bg-cream-100 p-5 font-sans text-sm leading-relaxed text-ink-soft">
-          {skill.prompt[l]}
-        </pre>
+
+        {/* Sidebar */}
+        <aside className="lg:border-l lg:border-line lg:pl-8">
+          <p className="eyebrow text-ink-muted">{t("tags")}</p>
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            {skill.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded border border-line px-2 py-0.5 font-mono text-[0.65rem] uppercase tracking-wide text-ink-soft"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <p className="eyebrow mt-8 text-ink-muted">{t("metadata")}</p>
+          <dl className="mt-3 space-y-2 font-mono text-xs">
+            <div className="flex items-center justify-between gap-3 border-b border-line pb-2">
+              <dt className="uppercase tracking-wide text-ink-muted">
+                {t("metaCategory")}
+              </dt>
+              <dd className="text-ink-soft">{category?.name[l]}</dd>
+            </div>
+            <div className="flex items-center justify-between gap-3 border-b border-line pb-2">
+              <dt className="uppercase tracking-wide text-ink-muted">
+                {t("metaLanguage")}
+              </dt>
+              <dd className="uppercase text-ink-soft">{l}</dd>
+            </div>
+            <div className="flex items-center justify-between gap-3">
+              <dt className="uppercase tracking-wide text-ink-muted">
+                {t("metaSlug")}
+              </dt>
+              <dd className="text-ink-soft">{skill.slug}</dd>
+            </div>
+          </dl>
+        </aside>
       </div>
 
+      {/* Related */}
       {related.length > 0 && (
-        <div className="mt-14">
-          <h2 className="text-2xl font-bold tracking-tight text-ink">
-            {t("related")}
-          </h2>
+        <div className="mt-16 border-t border-line pt-10">
+          <p className="eyebrow text-terracotta">{t("related")}</p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((s) => (
               <SkillCard key={s.slug} skill={s} locale={l} />
