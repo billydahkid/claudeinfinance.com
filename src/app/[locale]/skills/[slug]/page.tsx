@@ -106,12 +106,19 @@ export default async function SkillPage({
             </pre>
           </div>
 
-          {/* Secondary action: link to the source repository */}
+          <p className="prose-serif mt-3 text-sm text-ink-muted">
+            {t("promptHint")}
+          </p>
+        </div>
+
+        {/* Sidebar */}
+        <aside className="lg:border-l lg:border-line lg:pl-8">
+          {/* Source repository */}
           <a
             href={skill.sourceUrl ?? REPO_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group mt-3 flex items-center justify-between rounded-card border border-line bg-cream-100/60 px-4 py-3 transition-colors hover:border-terracotta-light hover:bg-cream-100"
+            className="group flex items-center justify-between rounded-card border border-line bg-cream-100/60 px-4 py-3 transition-colors hover:border-terracotta-light hover:bg-cream-100"
           >
             <span className="flex items-center gap-2 text-sm font-medium text-ink">
               <Github className="h-4 w-4 text-ink-soft" />
@@ -120,14 +127,7 @@ export default async function SkillPage({
             <ArrowUpRight className="h-4 w-4 text-ink-muted transition-colors group-hover:text-terracotta" />
           </a>
 
-          <p className="prose-serif mt-3 text-sm text-ink-muted">
-            {t("promptHint")}
-          </p>
-        </div>
-
-        {/* Sidebar */}
-        <aside className="lg:border-l lg:border-line lg:pl-8">
-          <p className="eyebrow text-ink-muted">{t("tags")}</p>
+          <p className="eyebrow mt-8 text-ink-muted">{t("tags")}</p>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {skill.tags.map((tag) => (
               <span
