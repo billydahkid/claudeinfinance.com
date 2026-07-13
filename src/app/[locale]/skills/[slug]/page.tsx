@@ -125,7 +125,7 @@ export default async function SkillPage({
               </span>
               <CopyPromptButton prompt={installCommand} />
             </div>
-            <pre className="overflow-x-auto px-4 py-4 font-mono text-xs leading-relaxed">
+            <pre className="whitespace-pre-wrap break-all px-4 py-4 font-mono text-xs leading-relaxed">
               <code>
                 <span className="text-cream/90">npx </span>
                 <span className="text-cream">skills add </span>
