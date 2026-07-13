@@ -1,0 +1,322 @@
+[
+  {
+    "slug": "modele-dcf",
+    "category": "ma-corporate-finance",
+    "tags": [
+      "DCF",
+      "valorisation",
+      "WACC",
+      "modelisation"
+    ],
+    "title": {
+      "fr": "Construire un modele DCF",
+      "en": "Build a DCF model"
+    },
+    "summary": {
+      "fr": "Structure un modele de flux de tresorerie actualises avec hypotheses, WACC et valeur terminale.",
+      "en": "Structures a discounted cash flow model with assumptions, WACC and terminal value."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/modele-dcf",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill modele-dcf"
+  },
+  {
+    "slug": "analyse-comparables",
+    "category": "ma-corporate-finance",
+    "tags": [
+      "comparables",
+      "multiples",
+      "EV/EBITDA",
+      "benchmark"
+    ],
+    "title": {
+      "fr": "Analyse des comparables boursiers",
+      "en": "Trading comparables analysis"
+    },
+    "summary": {
+      "fr": "Selectionne un panel de comparables et calcule les multiples de valorisation pertinents.",
+      "en": "Selects a peer panel and computes the relevant valuation multiples."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/analyse-comparables",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill analyse-comparables"
+  },
+  {
+    "slug": "memo-investissement",
+    "category": "private-equity",
+    "tags": [
+      "memo",
+      "these",
+      "LBO",
+      "comite"
+    ],
+    "title": {
+      "fr": "Rediger un memo d'investissement",
+      "en": "Write an investment memo"
+    },
+    "summary": {
+      "fr": "Genere la trame d'un investment memo PE avec these, risques et retours attendus.",
+      "en": "Generates a PE investment memo outline with thesis, risks and expected returns."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/memo-investissement",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill memo-investissement"
+  },
+  {
+    "slug": "checklist-due-diligence",
+    "category": "private-equity",
+    "tags": [
+      "due diligence",
+      "checklist",
+      "acquisition",
+      "risques"
+    ],
+    "title": {
+      "fr": "Checklist de due diligence",
+      "en": "Due diligence checklist"
+    },
+    "summary": {
+      "fr": "Produit une checklist de due diligence financiere, juridique et operationnelle.",
+      "en": "Produces a financial, legal and operational due diligence checklist."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/checklist-due-diligence",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill checklist-due-diligence"
+  },
+  {
+    "slug": "scoring-startup",
+    "category": "venture-capital",
+    "tags": [
+      "scoring",
+      "deal flow",
+      "traction",
+      "evaluation"
+    ],
+    "title": {
+      "fr": "Scorer une startup",
+      "en": "Score a startup"
+    },
+    "summary": {
+      "fr": "Evalue une startup selon equipe, marche, produit, traction et modele economique.",
+      "en": "Evaluates a startup across team, market, product, traction and business model."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/scoring-startup",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill scoring-startup"
+  },
+  {
+    "slug": "analyse-term-sheet",
+    "category": "venture-capital",
+    "tags": [
+      "term sheet",
+      "valorisation",
+      "clauses",
+      "dilution"
+    ],
+    "title": {
+      "fr": "Analyser une term sheet",
+      "en": "Analyze a term sheet"
+    },
+    "summary": {
+      "fr": "Decrypte les clauses cles d'une term sheet et leurs implications pour le fondateur.",
+      "en": "Breaks down the key clauses of a term sheet and their impact on the founder."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/analyse-term-sheet",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill analyse-term-sheet"
+  },
+  {
+    "slug": "note-marche",
+    "category": "marches-trading",
+    "tags": [
+      "macro",
+      "note",
+      "synthese",
+      "marches"
+    ],
+    "title": {
+      "fr": "Rediger une note de marche",
+      "en": "Write a market note"
+    },
+    "summary": {
+      "fr": "Synthetise le contexte macro et sectoriel en une note de marche structuree.",
+      "en": "Synthesizes the macro and sector context into a structured market note."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/note-marche",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill note-marche"
+  },
+  {
+    "slug": "backtest-strategie",
+    "category": "marches-trading",
+    "tags": [
+      "backtest",
+      "strategie",
+      "systematique",
+      "metriques"
+    ],
+    "title": {
+      "fr": "Cadrer un backtest de strategie",
+      "en": "Frame a strategy backtest"
+    },
+    "summary": {
+      "fr": "Definit les regles, l'univers et les metriques d'un backtest de strategie systematique.",
+      "en": "Defines the rules, universe and metrics of a systematic strategy backtest."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/backtest-strategie",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill backtest-strategie"
+  },
+  {
+    "slug": "construction-budget",
+    "category": "controle-de-gestion",
+    "tags": [
+      "budget",
+      "previsionnel",
+      "scenarios",
+      "pilotage"
+    ],
+    "title": {
+      "fr": "Construire un budget annuel",
+      "en": "Build an annual budget"
+    },
+    "summary": {
+      "fr": "Structure un budget annuel par centre de cout avec hypotheses et scenarios.",
+      "en": "Structures an annual budget by cost center with assumptions and scenarios."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/construction-budget",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill construction-budget"
+  },
+  {
+    "slug": "analyse-ecarts",
+    "category": "controle-de-gestion",
+    "tags": [
+      "ecarts",
+      "reporting",
+      "analyse",
+      "performance"
+    ],
+    "title": {
+      "fr": "Analyser les ecarts budgetaires",
+      "en": "Analyze budget variances"
+    },
+    "summary": {
+      "fr": "Explique les ecarts entre reel et budget par effet prix, volume et mix.",
+      "en": "Explains actual versus budget variances by price, volume and mix effect."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/analyse-ecarts",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill analyse-ecarts"
+  },
+  {
+    "slug": "revue-comptes",
+    "category": "audit-comptabilite",
+    "tags": [
+      "cloture",
+      "controle",
+      "cycles",
+      "revision"
+    ],
+    "title": {
+      "fr": "Preparer une revue de comptes",
+      "en": "Prepare an accounts review"
+    },
+    "summary": {
+      "fr": "Liste les controles cle par cycle pour securiser une cloture comptable.",
+      "en": "Lists the key controls by cycle to secure an accounting close."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/revue-comptes",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill revue-comptes"
+  },
+  {
+    "slug": "ecriture-comptable",
+    "category": "audit-comptabilite",
+    "tags": [
+      "ecritures",
+      "debit credit",
+      "traitement",
+      "normes"
+    ],
+    "title": {
+      "fr": "Expliquer une ecriture comptable",
+      "en": "Explain an accounting entry"
+    },
+    "summary": {
+      "fr": "Detaille le schema d'ecriture d'une operation et son traitement comptable.",
+      "en": "Details the journal entry of a transaction and its accounting treatment."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/ecriture-comptable",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill ecriture-comptable"
+  },
+  {
+    "slug": "cartographie-risques",
+    "category": "risque-conformite",
+    "tags": [
+      "cartographie",
+      "risques",
+      "controle interne",
+      "cotation"
+    ],
+    "title": {
+      "fr": "Batir une cartographie des risques",
+      "en": "Build a risk map"
+    },
+    "summary": {
+      "fr": "Identifie et cote les risques par probabilite et impact avec plan de maitrise.",
+      "en": "Identifies and rates risks by likelihood and impact with a mitigation plan."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/cartographie-risques",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill cartographie-risques"
+  },
+  {
+    "slug": "procedure-kyc",
+    "category": "risque-conformite",
+    "tags": [
+      "KYC",
+      "LCB-FT",
+      "conformite",
+      "vigilance"
+    ],
+    "title": {
+      "fr": "Rediger une procedure KYC",
+      "en": "Draft a KYC procedure"
+    },
+    "summary": {
+      "fr": "Formalise les etapes d'entree en relation et de vigilance LCB-FT.",
+      "en": "Formalizes the onboarding and AML-CFT due diligence steps."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/procedure-kyc",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill procedure-kyc"
+  },
+  {
+    "slug": "automatisation-reporting",
+    "category": "data-automatisation",
+    "tags": [
+      "automatisation",
+      "reporting",
+      "pipeline",
+      "Excel"
+    ],
+    "title": {
+      "fr": "Automatiser un reporting financier",
+      "en": "Automate a financial report"
+    },
+    "summary": {
+      "fr": "Concoit un pipeline pour automatiser la production d'un reporting recurrent.",
+      "en": "Designs a pipeline to automate the production of a recurring report."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/automatisation-reporting",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill automatisation-reporting"
+  },
+  {
+    "slug": "formule-excel",
+    "category": "data-automatisation",
+    "tags": [
+      "Excel",
+      "formule",
+      "tableur",
+      "productivite"
+    ],
+    "title": {
+      "fr": "Traduire un besoin en formule Excel",
+      "en": "Turn a need into an Excel formula"
+    },
+    "summary": {
+      "fr": "Transforme une demande metier en formule Excel robuste et expliquee.",
+      "en": "Turns a business request into a robust, explained Excel formula."
+    },
+    "source": "https://github.com/billydahkid/claudeinfinance.com/tree/main/skills/formule-excel",
+    "install": "npx skills add https://github.com/billydahkid/claudeinfinance.com --skill formule-excel"
+  }
+]

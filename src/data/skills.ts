@@ -414,3 +414,13 @@ export function getSkillsByCategory(slug: string): Skill[] {
 export function getFeaturedSkills(): Skill[] {
   return skills.filter((s) => s.featured);
 }
+
+/** Deep link to the skill's folder in the source repository. */
+export function getSkillSourceUrl(skill: Skill): string {
+  return skill.sourceUrl ?? `${REPO_URL}/tree/main/skills/${skill.slug}`;
+}
+
+/** Install command shown in the skill page, matching the skills CLI convention. */
+export function getInstallCommand(skill: Skill): string {
+  return `npx skills add ${REPO_URL} --skill ${skill.slug}`;
+}

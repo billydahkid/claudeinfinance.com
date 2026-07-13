@@ -9,6 +9,8 @@ import {
   getSkill,
   getCategory,
   getSkillsByCategory,
+  getInstallCommand,
+  getSkillSourceUrl,
   REPO_URL,
 } from "@/data/skills";
 import CopyPromptButton from "@/components/CopyPromptButton";
@@ -49,6 +51,8 @@ export default async function SkillPage({
 
   const t = await getTranslations("skill");
   const category = getCategory(skill.category);
+  const sourceUrl = getSkillSourceUrl(skill);
+  const installCommand = getInstallCommand(skill);
   const related = getSkillsByCategory(skill.category)
     .filter((s) => s.slug !== skill.slug)
     .slice(0, 3);
@@ -113,12 +117,34 @@ export default async function SkillPage({
 
         {/* Sidebar */}
         <aside className="lg:border-l lg:border-line lg:pl-8">
+          {/* Installation */}
+          <div className="overflow-hidden rounded-card border border-ink/10 bg-ink">
+            <div className="flex items-center justify-between border-b border-white/10 px-4 py-2.5">
+              <span className="font-mono text-xs uppercase tracking-wide text-cream/60">
+                {t("installTitle")}
+              </span>
+              <CopyPromptButton prompt={installCommand} />
+            </div>
+            <pre className="overflow-x-auto px-4 py-4 font-mono text-xs leading-relaxed">
+              <code>
+                <span className="text-cream/90">npx </span>
+                <span className="text-cream">skills add </span>
+                <span className="text-cream/50">{REPO_URL}</span>
+                <span className="text-terracotta-light"> --skill </span>
+                <span className="text-cream">{skill.slug}</span>
+              </code>
+            </pre>
+          </div>
+          <p className="prose-serif mt-2 text-xs text-ink-muted">
+            {t("installHint")}
+          </p>
+
           {/* Source repository */}
           <a
-            href={skill.sourceUrl ?? REPO_URL}
+            href={sourceUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-between rounded-card border border-line bg-cream-100/60 px-4 py-3 transition-colors hover:border-terracotta-light hover:bg-cream-100"
+            className="group mt-4 flex items-center justify-between rounded-card border border-line bg-cream-100/60 px-4 py-3 transition-colors hover:border-terracotta-light hover:bg-cream-100"
           >
             <span className="flex items-center gap-2 text-sm font-medium text-ink">
               <Github className="h-4 w-4 text-ink-soft" />
@@ -165,7 +191,7 @@ export default async function SkillPage({
               </dt>
               <dd>
                 <a
-                  href={skill.sourceUrl ?? REPO_URL}
+                  href={sourceUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-terracotta hover:text-terracotta-dark"

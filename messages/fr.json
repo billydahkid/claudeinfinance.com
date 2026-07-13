@@ -56,6 +56,8 @@
     "category": "Categorie",
     "tags": "Tags",
     "note": "Note de la redaction",
+    "installTitle": "Installation",
+    "installHint": "Installez cet agent via la CLI skills.",
     "promptTitle": "Prompt",
     "promptHint": "Copiez ce prompt et collez le dans Claude pour demarrer.",
     "copy": "Copier",
