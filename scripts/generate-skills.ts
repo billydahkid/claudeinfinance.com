@@ -15,7 +15,12 @@ function yaml(s: string): string {
 
 const manifest: Array<Record<string, unknown>> = [];
 
-for (const skill of skills) {
+// Only scaffold our own skills; Anthropic entries live in their own repo.
+const ownSkills = skills.filter(
+  (s) => s.provider !== "anthropic" && s.prompt,
+);
+
+for (const skill of ownSkills) {
   const dir = join(skillsDir, skill.slug);
   mkdirSync(dir, { recursive: true });
 
@@ -81,7 +86,7 @@ const readme = [
   "## Catalogue",
   "",
   ...categories.map((c) => {
-    const items = skills.filter((s) => s.category === c.slug);
+    const items = ownSkills.filter((s) => s.category === c.slug);
     return [
       `### ${c.name.fr}`,
       "",
@@ -93,4 +98,4 @@ const readme = [
 
 writeFileSync(join(skillsDir, "README.md"), readme);
 
-console.log(`Generated ${skills.length} skills into ${skillsDir}`);
+console.log(`Generated ${ownSkills.length} skills into ${skillsDir}`);

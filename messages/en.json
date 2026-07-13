@@ -35,6 +35,11 @@
     "title": "Featured skills",
     "subtitle": "A selection of use cases loved by finance teams."
   },
+  "official": {
+    "badge": "Official - Anthropic",
+    "title": "Official Anthropic skills",
+    "subtitle": "Anthropic's open-source finance library (Apache 2.0), referenced and linked here. We are not affiliated with Anthropic."
+  },
   "explorer": {
     "title": "Explore all skills",
     "subtitle": "Search by keyword and filter by category.",
@@ -58,6 +63,8 @@
     "note": "Editor's note",
     "installTitle": "Installation",
     "installHint": "Install this agent through the skills CLI.",
+    "commandsTitle": "Commands",
+    "officialNote": "Official Anthropic skill (Apache 2.0). Install the plugin, then use these commands in Claude Code. Some full agents require Claude for Financial Services.",
     "promptTitle": "Prompt",
     "promptHint": "Copy this prompt and paste it into Claude to get started.",
     "copy": "Copy",

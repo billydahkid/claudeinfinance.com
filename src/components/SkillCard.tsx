@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { getCategory, type Skill } from "@/data/skills";
@@ -10,6 +11,8 @@ type Props = {
 
 export default function SkillCard({ skill, locale }: Props) {
   const category = getCategory(skill.category);
+  const tOfficial = useTranslations("official");
+  const isOfficial = skill.provider === "anthropic";
 
   return (
     <Link
@@ -17,11 +20,18 @@ export default function SkillCard({ skill, locale }: Props) {
       className="group flex h-full flex-col rounded-card border border-line bg-cream-100/60 p-5 transition-colors hover:border-terracotta-light hover:bg-cream-100"
     >
       <div className="flex items-start justify-between gap-3">
-        {category && (
-          <span className="eyebrow text-terracotta">
-            {category.name[locale]}
-          </span>
-        )}
+        <div className="flex flex-wrap items-center gap-2">
+          {category && (
+            <span className="eyebrow text-terracotta">
+              {category.name[locale]}
+            </span>
+          )}
+          {isOfficial && (
+            <span className="rounded border border-ink/15 bg-ink px-1.5 py-0.5 font-mono text-[0.6rem] uppercase tracking-wide text-cream">
+              {tOfficial("badge")}
+            </span>
+          )}
+        </div>
         <ArrowUpRight className="h-4 w-4 shrink-0 text-ink-muted transition-colors group-hover:text-terracotta" />
       </div>
 

@@ -26,6 +26,8 @@ export type Category = {
   description: Localized;
 };
 
+export type Provider = "claudeinfinance" | "anthropic";
+
 export type Skill = {
   slug: string;
   category: string; // category slug
@@ -33,13 +35,24 @@ export type Skill = {
   summary: Localized;
   tags: string[];
   featured?: boolean;
-  prompt: Localized;
-  /** Link to the source repository for this skill. Falls back to REPO_URL. */
+  /** Copyable prompt (own skills). Absent for plugin/agent based skills. */
+  prompt?: Localized;
+  /** Who authored the skill. Defaults to "claudeinfinance". */
+  provider?: Provider;
+  /** For Anthropic entries: the Claude Code plugin/agent to install. */
+  plugin?: string;
+  /** Slash commands exposed by the skill (mainly Anthropic plugins). */
+  commands?: string[];
+  /** Link to the source repository for this skill. Falls back per provider. */
   sourceUrl?: string;
 };
 
 /** Default source repository, used when a skill has no dedicated sourceUrl. */
 export const REPO_URL = "https://github.com/billydahkid/claudeinfinance.com";
+
+/** Official Anthropic finance library (Apache 2.0). */
+export const ANTHROPIC_REPO = "https://github.com/anthropics/financial-services";
+export const ANTHROPIC_MARKETPLACE = "claude-for-financial-services";
 
 export const categories: Category[] = [
   {
@@ -397,6 +410,164 @@ export const skills: Skill[] = [
       en: "Act as an Excel expert for finance. I will describe a need in plain language. Propose the right Excel formula, explain each part, point out the pitfalls (references, formats, empty cells) and give a more readable variant if possible. If several approaches exist, compare them briefly.",
     },
   },
+
+  // ── Officiels Anthropic (anthropics/financial-services, Apache 2.0) ──
+  {
+    slug: "financial-analysis",
+    category: "ma-corporate-finance",
+    provider: "anthropic",
+    plugin: "financial-analysis",
+    sourceUrl: ANTHROPIC_REPO,
+    commands: ["/comps", "/dcf", "/lbo", "/3-statement-model", "/debug-model"],
+    name: {
+      fr: "Financial Analysis (socle)",
+      en: "Financial Analysis (core)",
+    },
+    summary: {
+      fr: "Le plugin socle Anthropic : comps, DCF, LBO, three-statement et audit de modeles Excel.",
+      en: "Anthropic's core plugin: comps, DCF, LBO, three-statement and Excel model auditing.",
+    },
+    tags: ["DCF", "LBO", "comps", "three-statement"],
+  },
+  {
+    slug: "investment-banking",
+    category: "ma-corporate-finance",
+    provider: "anthropic",
+    plugin: "investment-banking",
+    sourceUrl: ANTHROPIC_REPO,
+    commands: [
+      "/cim",
+      "/teaser",
+      "/buyer-list",
+      "/merger-model",
+      "/process-letter",
+      "/deal-tracker",
+      "/one-pager",
+    ],
+    name: {
+      fr: "Investment Banking",
+      en: "Investment Banking",
+    },
+    summary: {
+      fr: "CIM, teasers, buyer lists, merger models et suivi de deal pour les operations M&A.",
+      en: "CIMs, teasers, buyer lists, merger models and deal tracking for M&A processes.",
+    },
+    tags: ["M&A", "CIM", "merger model", "deal"],
+  },
+  {
+    slug: "pitch-agent",
+    category: "ma-corporate-finance",
+    provider: "anthropic",
+    plugin: "pitch-agent",
+    sourceUrl: ANTHROPIC_REPO,
+    name: {
+      fr: "Pitch Agent",
+      en: "Pitch Agent",
+    },
+    summary: {
+      fr: "Genere un pitch deck M&A complet : comps, transactions precedentes et LBO preliminaire.",
+      en: "Generates a full M&A pitch deck: comps, precedent transactions and a preliminary LBO.",
+    },
+    tags: ["pitch", "deck", "M&A", "comps"],
+  },
+  {
+    slug: "private-equity",
+    category: "private-equity",
+    provider: "anthropic",
+    plugin: "private-equity",
+    sourceUrl: ANTHROPIC_REPO,
+    commands: [
+      "/screen-deal",
+      "/dd-checklist",
+      "/dd-prep",
+      "/ic-memo",
+      "/returns",
+      "/portfolio",
+      "/value-creation",
+    ],
+    name: {
+      fr: "Private Equity",
+      en: "Private Equity",
+    },
+    summary: {
+      fr: "Sourcing, screening, checklists de diligence, memos IC et monitoring de portefeuille.",
+      en: "Sourcing, screening, diligence checklists, IC memos and portfolio monitoring.",
+    },
+    tags: ["due diligence", "IC memo", "portfolio", "screening"],
+  },
+  {
+    slug: "equity-research",
+    category: "marches-trading",
+    provider: "anthropic",
+    plugin: "equity-research",
+    sourceUrl: ANTHROPIC_REPO,
+    commands: [
+      "/earnings",
+      "/earnings-preview",
+      "/morning-note",
+      "/initiate",
+      "/thesis",
+      "/catalysts",
+      "/sector",
+    ],
+    name: {
+      fr: "Equity Research",
+      en: "Equity Research",
+    },
+    summary: {
+      fr: "Reviews de resultats, notes de marche, initiations de couverture et suivi de catalyseurs.",
+      en: "Earnings reviews, market notes, coverage initiations and catalyst tracking.",
+    },
+    tags: ["earnings", "research", "note", "catalysts"],
+  },
+  {
+    slug: "market-researcher",
+    category: "venture-capital",
+    provider: "anthropic",
+    plugin: "market-researcher",
+    sourceUrl: ANTHROPIC_REPO,
+    name: {
+      fr: "Market Researcher",
+      en: "Market Researcher",
+    },
+    summary: {
+      fr: "D'un secteur ou d'un theme a un panorama de marche et un paysage concurrentiel.",
+      en: "From a sector or theme to an industry overview and competitive landscape.",
+    },
+    tags: ["market research", "secteur", "concurrence"],
+  },
+  {
+    slug: "gl-reconciler",
+    category: "audit-comptabilite",
+    provider: "anthropic",
+    plugin: "gl-reconciler",
+    sourceUrl: ANTHROPIC_REPO,
+    name: {
+      fr: "GL Reconciler",
+      en: "GL Reconciler",
+    },
+    summary: {
+      fr: "Identifie les ecarts du grand livre, remonte a la cause racine et route pour validation.",
+      en: "Finds general-ledger breaks, traces the root cause and routes them for sign-off.",
+    },
+    tags: ["rapprochement", "grand livre", "cloture", "controle"],
+  },
+  {
+    slug: "fund-admin",
+    category: "audit-comptabilite",
+    provider: "anthropic",
+    plugin: "fund-admin",
+    sourceUrl: ANTHROPIC_REPO,
+    name: {
+      fr: "Fund Admin",
+      en: "Fund Admin",
+    },
+    summary: {
+      fr: "Administration de fonds : cloture, roll-forwards, commentaires d'ecarts et audit des etats LP.",
+      en: "Fund administration: close, roll-forwards, variance commentary and LP statement auditing.",
+    },
+    tags: ["fund admin", "cloture", "roll-forward", "LP"],
+  },
 ];
 
 export function getCategory(slug: string): Category | undefined {
@@ -412,15 +583,24 @@ export function getSkillsByCategory(slug: string): Skill[] {
 }
 
 export function getFeaturedSkills(): Skill[] {
-  return skills.filter((s) => s.featured);
+  return skills.filter((s) => s.featured && s.provider !== "anthropic");
 }
 
-/** Deep link to the skill's folder in the source repository. */
+export function getOfficialSkills(): Skill[] {
+  return skills.filter((s) => s.provider === "anthropic");
+}
+
+/** Deep link to the skill's source repository. */
 export function getSkillSourceUrl(skill: Skill): string {
-  return skill.sourceUrl ?? `${REPO_URL}/tree/main/skills/${skill.slug}`;
+  if (skill.sourceUrl) return skill.sourceUrl;
+  if (skill.provider === "anthropic") return ANTHROPIC_REPO;
+  return `${REPO_URL}/tree/main/skills/${skill.slug}`;
 }
 
-/** Install command shown in the skill page, matching the skills CLI convention. */
+/** Install command shown in the skill page. Plugin form for Anthropic entries. */
 export function getInstallCommand(skill: Skill): string {
+  if (skill.provider === "anthropic" && skill.plugin) {
+    return `claude plugin install ${skill.plugin}@${ANTHROPIC_MARKETPLACE}`;
+  }
   return `npx skills add ${REPO_URL} --skill ${skill.slug}`;
 }

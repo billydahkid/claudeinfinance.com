@@ -12,6 +12,7 @@ import {
   getInstallCommand,
   getSkillSourceUrl,
   REPO_URL,
+  ANTHROPIC_MARKETPLACE,
 } from "@/data/skills";
 import CopyPromptButton from "@/components/CopyPromptButton";
 import SkillCard from "@/components/SkillCard";
@@ -50,7 +51,9 @@ export default async function SkillPage({
   if (!skill) notFound();
 
   const t = await getTranslations("skill");
+  const tOfficial = await getTranslations("official");
   const category = getCategory(skill.category);
+  const isOfficial = skill.provider === "anthropic";
   const sourceUrl = getSkillSourceUrl(skill);
   const installCommand = getInstallCommand(skill);
   const related = getSkillsByCategory(skill.category)
@@ -81,9 +84,16 @@ export default async function SkillPage({
 
       {/* Title block */}
       <div className="mt-8">
-        {category && (
-          <p className="eyebrow text-terracotta">{category.name[l]}</p>
-        )}
+        <div className="flex flex-wrap items-center gap-2">
+          {category && (
+            <p className="eyebrow text-terracotta">{category.name[l]}</p>
+          )}
+          {isOfficial && (
+            <span className="rounded border border-ink/15 bg-ink px-1.5 py-0.5 font-mono text-[0.6rem] uppercase tracking-wide text-cream">
+              {tOfficial("badge")}
+            </span>
+          )}
+        </div>
         <h1 className="font-display mt-3 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           {skill.name[l]}
         </h1>
@@ -97,22 +107,49 @@ export default async function SkillPage({
             {skill.summary[l]}
           </p>
 
-          {/* Prompt box */}
-          <div className="mt-8 overflow-hidden rounded-card border border-ink/10 bg-ink">
-            <div className="flex items-center justify-between border-b border-white/10 px-4 py-2.5">
-              <span className="font-mono text-xs uppercase tracking-wide text-cream/60">
-                {t("promptTitle")}
-              </span>
-              <CopyPromptButton prompt={skill.prompt[l]} />
-            </div>
-            <pre className="prose-serif overflow-x-auto whitespace-pre-wrap px-5 py-5 text-[0.95rem] leading-relaxed text-cream/90">
-              {skill.prompt[l]}
-            </pre>
-          </div>
-
-          <p className="prose-serif mt-3 text-sm text-ink-muted">
-            {t("promptHint")}
-          </p>
+          {skill.prompt ? (
+            <>
+              {/* Prompt box (own skills) */}
+              <div className="mt-8 overflow-hidden rounded-card border border-ink/10 bg-ink">
+                <div className="flex items-center justify-between border-b border-white/10 px-4 py-2.5">
+                  <span className="font-mono text-xs uppercase tracking-wide text-cream/60">
+                    {t("promptTitle")}
+                  </span>
+                  <CopyPromptButton prompt={skill.prompt[l]} />
+                </div>
+                <pre className="prose-serif overflow-x-auto whitespace-pre-wrap px-5 py-5 text-[0.95rem] leading-relaxed text-cream/90">
+                  {skill.prompt[l]}
+                </pre>
+              </div>
+              <p className="prose-serif mt-3 text-sm text-ink-muted">
+                {t("promptHint")}
+              </p>
+            </>
+          ) : (
+            <>
+              {/* Commands + note (Anthropic official skills) */}
+              {skill.commands && skill.commands.length > 0 && (
+                <div className="mt-8">
+                  <p className="eyebrow text-ink-muted">
+                    {t("commandsTitle")}
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {skill.commands.map((cmd) => (
+                      <span
+                        key={cmd}
+                        className="rounded border border-line bg-cream-100/60 px-2 py-1 font-mono text-xs text-ink-soft"
+                      >
+                        {cmd}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              <p className="prose-serif mt-6 text-sm text-ink-muted">
+                {t("officialNote")}
+              </p>
+            </>
+          )}
         </div>
 
         {/* Sidebar */}
@@ -127,11 +164,24 @@ export default async function SkillPage({
             </div>
             <pre className="whitespace-pre-wrap break-all px-4 py-4 font-mono text-xs leading-relaxed">
               <code>
-                <span className="text-cream/90">npx </span>
-                <span className="text-cream">skills add </span>
-                <span className="text-cream/50">{REPO_URL}</span>
-                <span className="text-terracotta-light"> --skill </span>
-                <span className="text-cream">{skill.slug}</span>
+                {isOfficial && skill.plugin ? (
+                  <>
+                    <span className="text-cream/90">claude plugin install </span>
+                    <span className="text-cream">{skill.plugin}</span>
+                    <span className="text-terracotta-light">@</span>
+                    <span className="text-cream/50">
+                      {ANTHROPIC_MARKETPLACE}
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-cream/90">npx </span>
+                    <span className="text-cream">skills add </span>
+                    <span className="text-cream/50">{REPO_URL}</span>
+                    <span className="text-terracotta-light"> --skill </span>
+                    <span className="text-cream">{skill.slug}</span>
+                  </>
+                )}
               </code>
             </pre>
           </div>
