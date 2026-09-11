@@ -1,5 +1,6 @@
 ---
 name: scoring-startup
+description: "Evalue une startup selon equipe, marche, produit, traction et modele economique. A utiliser quand l'utilisateur demande: Scorer une startup / Score a startup."
 title:
   fr: "Scorer une startup"
   en: "Score a startup"

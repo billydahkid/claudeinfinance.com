@@ -1,5 +1,6 @@
 ---
 name: revue-comptes
+description: "Liste les controles cle par cycle pour securiser une cloture comptable. A utiliser quand l'utilisateur demande: Preparer une revue de comptes / Prepare an accounts review."
 title:
   fr: "Preparer une revue de comptes"
   en: "Prepare an accounts review"

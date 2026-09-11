@@ -1,5 +1,6 @@
 ---
 name: analyse-ecarts
+description: "Explique les ecarts entre reel et budget par effet prix, volume et mix. A utiliser quand l'utilisateur demande: Analyser les ecarts budgetaires / Analyze budget variances."
 title:
   fr: "Analyser les ecarts budgetaires"
   en: "Analyze budget variances"

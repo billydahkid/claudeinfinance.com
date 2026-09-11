@@ -1,5 +1,6 @@
 ---
 name: formule-excel
+description: "Transforme une demande metier en formule Excel robuste et expliquee. A utiliser quand l'utilisateur demande: Traduire un besoin en formule Excel / Turn a need into an Excel formula."
 title:
   fr: "Traduire un besoin en formule Excel"
   en: "Turn a need into an Excel formula"

@@ -1,5 +1,6 @@
 ---
 name: analyse-comparables
+description: "Selectionne un panel de comparables et calcule les multiples de valorisation pertinents. A utiliser quand l'utilisateur demande: Analyse des comparables boursiers / Trading comparables analysis."
 title:
   fr: "Analyse des comparables boursiers"
   en: "Trading comparables analysis"

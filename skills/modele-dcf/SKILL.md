@@ -1,5 +1,6 @@
 ---
 name: modele-dcf
+description: "Structure un modele de flux de tresorerie actualises avec hypotheses, WACC et valeur terminale. A utiliser quand l'utilisateur demande: Construire un modele DCF / Build a DCF model."
 title:
   fr: "Construire un modele DCF"
   en: "Build a DCF model"

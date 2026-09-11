@@ -12,6 +12,7 @@
       "fr": "Construire un modele DCF",
       "en": "Build a DCF model"
     },
+    "description": "Structure un modele de flux de tresorerie actualises avec hypotheses, WACC et valeur terminale. A utiliser quand l'utilisateur demande: Construire un modele DCF / Build a DCF model.",
     "summary": {
       "fr": "Structure un modele de flux de tresorerie actualises avec hypotheses, WACC et valeur terminale.",
       "en": "Structures a discounted cash flow model with assumptions, WACC and terminal value."
@@ -32,6 +33,7 @@
       "fr": "Analyse des comparables boursiers",
       "en": "Trading comparables analysis"
     },
+    "description": "Selectionne un panel de comparables et calcule les multiples de valorisation pertinents. A utiliser quand l'utilisateur demande: Analyse des comparables boursiers / Trading comparables analysis.",
     "summary": {
       "fr": "Selectionne un panel de comparables et calcule les multiples de valorisation pertinents.",
       "en": "Selects a peer panel and computes the relevant valuation multiples."
@@ -52,6 +54,7 @@
       "fr": "Rediger un memo d'investissement",
       "en": "Write an investment memo"
     },
+    "description": "Genere la trame d'un investment memo PE avec these, risques et retours attendus. A utiliser quand l'utilisateur demande: Rediger un memo d'investissement / Write an investment memo.",
     "summary": {
       "fr": "Genere la trame d'un investment memo PE avec these, risques et retours attendus.",
       "en": "Generates a PE investment memo outline with thesis, risks and expected returns."
@@ -72,6 +75,7 @@
       "fr": "Checklist de due diligence",
       "en": "Due diligence checklist"
     },
+    "description": "Produit une checklist de due diligence financiere, juridique et operationnelle. A utiliser quand l'utilisateur demande: Checklist de due diligence / Due diligence checklist.",
     "summary": {
       "fr": "Produit une checklist de due diligence financiere, juridique et operationnelle.",
       "en": "Produces a financial, legal and operational due diligence checklist."
@@ -92,6 +96,7 @@
       "fr": "Scorer une startup",
       "en": "Score a startup"
     },
+    "description": "Evalue une startup selon equipe, marche, produit, traction et modele economique. A utiliser quand l'utilisateur demande: Scorer une startup / Score a startup.",
     "summary": {
       "fr": "Evalue une startup selon equipe, marche, produit, traction et modele economique.",
       "en": "Evaluates a startup across team, market, product, traction and business model."
@@ -112,6 +117,7 @@
       "fr": "Analyser une term sheet",
       "en": "Analyze a term sheet"
     },
+    "description": "Decrypte les clauses cles d'une term sheet et leurs implications pour le fondateur. A utiliser quand l'utilisateur demande: Analyser une term sheet / Analyze a term sheet.",
     "summary": {
       "fr": "Decrypte les clauses cles d'une term sheet et leurs implications pour le fondateur.",
       "en": "Breaks down the key clauses of a term sheet and their impact on the founder."
@@ -132,6 +138,7 @@
       "fr": "Rediger une note de marche",
       "en": "Write a market note"
     },
+    "description": "Synthetise le contexte macro et sectoriel en une note de marche structuree. A utiliser quand l'utilisateur demande: Rediger une note de marche / Write a market note.",
     "summary": {
       "fr": "Synthetise le contexte macro et sectoriel en une note de marche structuree.",
       "en": "Synthesizes the macro and sector context into a structured market note."
@@ -152,6 +159,7 @@
       "fr": "Cadrer un backtest de strategie",
       "en": "Frame a strategy backtest"
     },
+    "description": "Definit les regles, l'univers et les metriques d'un backtest de strategie systematique. A utiliser quand l'utilisateur demande: Cadrer un backtest de strategie / Frame a strategy backtest.",
     "summary": {
       "fr": "Definit les regles, l'univers et les metriques d'un backtest de strategie systematique.",
       "en": "Defines the rules, universe and metrics of a systematic strategy backtest."
@@ -172,6 +180,7 @@
       "fr": "Construire un budget annuel",
       "en": "Build an annual budget"
     },
+    "description": "Structure un budget annuel par centre de cout avec hypotheses et scenarios. A utiliser quand l'utilisateur demande: Construire un budget annuel / Build an annual budget.",
     "summary": {
       "fr": "Structure un budget annuel par centre de cout avec hypotheses et scenarios.",
       "en": "Structures an annual budget by cost center with assumptions and scenarios."
@@ -192,6 +201,7 @@
       "fr": "Analyser les ecarts budgetaires",
       "en": "Analyze budget variances"
     },
+    "description": "Explique les ecarts entre reel et budget par effet prix, volume et mix. A utiliser quand l'utilisateur demande: Analyser les ecarts budgetaires / Analyze budget variances.",
     "summary": {
       "fr": "Explique les ecarts entre reel et budget par effet prix, volume et mix.",
       "en": "Explains actual versus budget variances by price, volume and mix effect."
@@ -212,6 +222,7 @@
       "fr": "Preparer une revue de comptes",
       "en": "Prepare an accounts review"
     },
+    "description": "Liste les controles cle par cycle pour securiser une cloture comptable. A utiliser quand l'utilisateur demande: Preparer une revue de comptes / Prepare an accounts review.",
     "summary": {
       "fr": "Liste les controles cle par cycle pour securiser une cloture comptable.",
       "en": "Lists the key controls by cycle to secure an accounting close."
@@ -232,6 +243,7 @@
       "fr": "Expliquer une ecriture comptable",
       "en": "Explain an accounting entry"
     },
+    "description": "Detaille le schema d'ecriture d'une operation et son traitement comptable. A utiliser quand l'utilisateur demande: Expliquer une ecriture comptable / Explain an accounting entry.",
     "summary": {
       "fr": "Detaille le schema d'ecriture d'une operation et son traitement comptable.",
       "en": "Details the journal entry of a transaction and its accounting treatment."
@@ -252,6 +264,7 @@
       "fr": "Batir une cartographie des risques",
       "en": "Build a risk map"
     },
+    "description": "Identifie et cote les risques par probabilite et impact avec plan de maitrise. A utiliser quand l'utilisateur demande: Batir une cartographie des risques / Build a risk map.",
     "summary": {
       "fr": "Identifie et cote les risques par probabilite et impact avec plan de maitrise.",
       "en": "Identifies and rates risks by likelihood and impact with a mitigation plan."
@@ -272,6 +285,7 @@
       "fr": "Rediger une procedure KYC",
       "en": "Draft a KYC procedure"
     },
+    "description": "Formalise les etapes d'entree en relation et de vigilance LCB-FT. A utiliser quand l'utilisateur demande: Rediger une procedure KYC / Draft a KYC procedure.",
     "summary": {
       "fr": "Formalise les etapes d'entree en relation et de vigilance LCB-FT.",
       "en": "Formalizes the onboarding and AML-CFT due diligence steps."
@@ -292,6 +306,7 @@
       "fr": "Automatiser un reporting financier",
       "en": "Automate a financial report"
     },
+    "description": "Concoit un pipeline pour automatiser la production d'un reporting recurrent. A utiliser quand l'utilisateur demande: Automatiser un reporting financier / Automate a financial report.",
     "summary": {
       "fr": "Concoit un pipeline pour automatiser la production d'un reporting recurrent.",
       "en": "Designs a pipeline to automate the production of a recurring report."
@@ -312,6 +327,7 @@
       "fr": "Traduire un besoin en formule Excel",
       "en": "Turn a need into an Excel formula"
     },
+    "description": "Transforme une demande metier en formule Excel robuste et expliquee. A utiliser quand l'utilisateur demande: Traduire un besoin en formule Excel / Turn a need into an Excel formula.",
     "summary": {
       "fr": "Transforme une demande metier en formule Excel robuste et expliquee.",
       "en": "Turns a business request into a robust, explained Excel formula."

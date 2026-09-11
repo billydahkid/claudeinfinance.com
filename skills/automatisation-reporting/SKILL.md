@@ -1,5 +1,6 @@
 ---
 name: automatisation-reporting
+description: "Concoit un pipeline pour automatiser la production d'un reporting recurrent. A utiliser quand l'utilisateur demande: Automatiser un reporting financier / Automate a financial report."
 title:
   fr: "Automatiser un reporting financier"
   en: "Automate a financial report"

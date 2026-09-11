@@ -1,5 +1,6 @@
 ---
 name: note-marche
+description: "Synthetise le contexte macro et sectoriel en une note de marche structuree. A utiliser quand l'utilisateur demande: Rediger une note de marche / Write a market note."
 title:
   fr: "Rediger une note de marche"
   en: "Write a market note"

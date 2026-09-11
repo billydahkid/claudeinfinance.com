@@ -1,5 +1,6 @@
 ---
 name: procedure-kyc
+description: "Formalise les etapes d'entree en relation et de vigilance LCB-FT. A utiliser quand l'utilisateur demande: Rediger une procedure KYC / Draft a KYC procedure."
 title:
   fr: "Rediger une procedure KYC"
   en: "Draft a KYC procedure"

@@ -1,5 +1,6 @@
 ---
 name: backtest-strategie
+description: "Definit les regles, l'univers et les metriques d'un backtest de strategie systematique. A utiliser quand l'utilisateur demande: Cadrer un backtest de strategie / Frame a strategy backtest."
 title:
   fr: "Cadrer un backtest de strategie"
   en: "Frame a strategy backtest"

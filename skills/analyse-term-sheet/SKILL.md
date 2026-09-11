@@ -1,5 +1,6 @@
 ---
 name: analyse-term-sheet
+description: "Decrypte les clauses cles d'une term sheet et leurs implications pour le fondateur. A utiliser quand l'utilisateur demande: Analyser une term sheet / Analyze a term sheet."
 title:
   fr: "Analyser une term sheet"
   en: "Analyze a term sheet"

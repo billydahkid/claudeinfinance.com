@@ -1,5 +1,6 @@
 ---
 name: construction-budget
+description: "Structure un budget annuel par centre de cout avec hypotheses et scenarios. A utiliser quand l'utilisateur demande: Construire un budget annuel / Build an annual budget."
 title:
   fr: "Construire un budget annuel"
   en: "Build an annual budget"

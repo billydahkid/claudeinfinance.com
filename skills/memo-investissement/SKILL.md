@@ -1,5 +1,6 @@
 ---
 name: memo-investissement
+description: "Genere la trame d'un investment memo PE avec these, risques et retours attendus. A utiliser quand l'utilisateur demande: Rediger un memo d'investissement / Write an investment memo."
 title:
   fr: "Rediger un memo d'investissement"
   en: "Write an investment memo"

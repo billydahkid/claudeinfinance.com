@@ -24,9 +24,17 @@ for (const skill of ownSkills) {
   const dir = join(skillsDir, skill.slug);
   mkdirSync(dir, { recursive: true });
 
+  // The `skills` CLI (and the Claude skill spec) requires `name` plus a flat
+  // `description`. It is built from the French summary, with both task names
+  // appended so the skill triggers on FR and EN phrasings alike.
+  const description =
+    `${skill.summary.fr} A utiliser quand l'utilisateur demande: ` +
+    `${skill.name.fr} / ${skill.name.en}.`;
+
   const front = [
     "---",
     `name: ${skill.slug}`,
+    `description: ${yaml(description)}`,
     "title:",
     `  fr: ${yaml(skill.name.fr)}`,
     `  en: ${yaml(skill.name.en)}`,
@@ -60,6 +68,7 @@ for (const skill of ownSkills) {
     category: skill.category,
     tags: skill.tags,
     title: skill.name,
+    description,
     summary: skill.summary,
     source: `${REPO_URL}/tree/main/skills/${skill.slug}`,
     install: `npx skills add ${REPO_URL} --skill ${skill.slug}`,

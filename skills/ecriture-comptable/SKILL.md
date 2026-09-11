@@ -1,5 +1,6 @@
 ---
 name: ecriture-comptable
+description: "Detaille le schema d'ecriture d'une operation et son traitement comptable. A utiliser quand l'utilisateur demande: Expliquer une ecriture comptable / Explain an accounting entry."
 title:
   fr: "Expliquer une ecriture comptable"
   en: "Explain an accounting entry"

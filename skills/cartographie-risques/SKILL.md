@@ -1,5 +1,6 @@
 ---
 name: cartographie-risques
+description: "Identifie et cote les risques par probabilite et impact avec plan de maitrise. A utiliser quand l'utilisateur demande: Batir une cartographie des risques / Build a risk map."
 title:
   fr: "Batir une cartographie des risques"
   en: "Build a risk map"

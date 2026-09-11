@@ -1,5 +1,6 @@
 ---
 name: checklist-due-diligence
+description: "Produit une checklist de due diligence financiere, juridique et operationnelle. A utiliser quand l'utilisateur demande: Checklist de due diligence / Due diligence checklist."
 title:
   fr: "Checklist de due diligence"
   en: "Due diligence checklist"
