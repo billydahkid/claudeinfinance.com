@@ -1,9 +1,9 @@
 import { useLocale, useTranslations } from "next-intl";
-import { BookOpen } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { categories } from "@/data/skills";
 import type { Locale } from "@/i18n/routing";
 import NewsletterSignup from "./NewsletterSignup";
+import Logo from "./Logo";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -14,16 +14,18 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 text-ink">
-              <BookOpen className="h-5 w-5 text-terracotta" strokeWidth={2} />
-              <span className="font-display text-lg font-semibold tracking-tight">
-                ClaudeInFinance
-                <span className="font-body italic text-terracotta">.com</span>
-              </span>
-            </div>
+            <Logo size="sm" />
             <p className="prose-serif mt-3 max-w-sm text-sm text-ink-muted">
               {t("tagline")} {t("editedBy")}{" "}
-              <span className="font-medium text-ink-soft">{'[""]'}</span>.
+              <a
+                href="https://careerhub.fr"
+                target="_blank"
+                rel="noopener"
+                className="font-medium text-ink-soft underline decoration-terracotta/40 underline-offset-2 transition-colors hover:text-terracotta hover:decoration-terracotta"
+              >
+                CareerHub
+              </a>
+              .
             </p>
             <div className="mt-8">
               <NewsletterSignup />
