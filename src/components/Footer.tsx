@@ -1,7 +1,8 @@
 import { useTranslations } from "next-intl";
-import { BookOpen, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { FORWARD_DEPLOY_URL } from "@/config";
+import Logo from "./Logo";
 import NewsletterSignup from "./NewsletterSignup";
 
 export default function Footer() {
@@ -29,12 +30,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 text-ink">
-              <BookOpen className="h-5 w-5 text-terracotta" strokeWidth={2} />
-              <span className="font-display text-lg font-semibold tracking-tight">
-                ClaudeInFinance
-              </span>
-            </div>
+            <Logo />
             <p className="prose-serif mt-3 max-w-sm text-sm text-ink-muted">
               {t("tagline")}
             </p>
