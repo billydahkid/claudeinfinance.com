@@ -17,6 +17,7 @@ const ROTATION: Record<string, { prefix: string; words: string[] }> = {
     prefix: "au service ",
     words: [
       "de la finance",
+      "de l'intelligence artificielle",
       "du M&A",
       "du Private Equity",
       "du Venture Capital",
@@ -29,6 +30,7 @@ const ROTATION: Record<string, { prefix: string; words: string[] }> = {
     prefix: "built for ",
     words: [
       "finance",
+      "artificial intelligence",
       "M&A",
       "Private Equity",
       "Venture Capital",
