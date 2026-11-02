@@ -31,7 +31,7 @@
   },
   "hero": {
     "eyebrow": "Practical AI training for finance",
-    "title": "Learn AI. Build Agents. Automate Finance.",
+    "title": "Learn AI. Build your own agents.",
     "subtitle": "Practical courses to master AI tools, design your own agents and automate financial workflows. Learn at your own pace, ship projects and earn a certificate after evaluation.",
     "ctaPrimary": "Browse courses",
     "ctaSecondary": "Explore free skills",
@@ -42,6 +42,18 @@
       "label": "See what you'll learn",
       "badge": "45 sec",
       "comingSoon": "Video coming soon"
+    },
+    "rotate": {
+      "prefix": "For ",
+      "words": [
+        "Private Equity",
+        "M&A",
+        "hedge funds",
+        "markets",
+        "audit",
+        "data",
+        "artificial intelligence"
+      ]
     }
   },
   "lba": {

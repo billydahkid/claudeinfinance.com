@@ -31,7 +31,7 @@
   },
   "hero": {
     "eyebrow": "Formations pratiques en IA pour la finance",
-    "title": "Apprenez l'IA. Creez vos agents. Automatisez la finance.",
+    "title": "Apprenez l'IA. Creez vos agents.",
     "subtitle": "Des formations pratiques pour maitriser les outils d'IA, concevoir vos propres agents et automatiser des workflows financiers. Apprenez a votre rythme, realisez des projets et obtenez un certificat apres evaluation.",
     "ctaPrimary": "Decouvrir les formations",
     "ctaSecondary": "Explorer les skills gratuits",
@@ -42,6 +42,18 @@
       "label": "Voir ce que vous allez apprendre",
       "badge": "45 sec",
       "comingSoon": "Video bientot disponible"
+    },
+    "rotate": {
+      "prefix": "Pour ",
+      "words": [
+        "le Private Equity",
+        "le M&A",
+        "les hedge funds",
+        "les marches",
+        "l'audit",
+        "la data",
+        "l'intelligence artificielle"
+      ]
     }
   },
   "lba": {

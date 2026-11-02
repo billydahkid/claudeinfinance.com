@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Building2, GraduationCap, ArrowUpRight } from "lucide-react";
-import { FORWARD_DEPLOY_URL } from "@/config";
+import { FORWARD_DEPLOY_CONTACT } from "@/config";
 import { fdUtm } from "@/data/offer";
 
 export async function generateMetadata({
@@ -29,14 +29,14 @@ export default async function OrganisationsPage({
       title: t("teamsTitle"),
       body: t("teamsBody"),
       cta: t("teamsCta"),
-      href: fdUtm(FORWARD_DEPLOY_URL, "orgpage-teams"),
+      href: fdUtm(FORWARD_DEPLOY_CONTACT, "orgpage-teams"),
     },
     {
       icon: GraduationCap,
       title: t("schoolsTitle"),
       body: t("schoolsBody"),
       cta: t("schoolsCta"),
-      href: fdUtm(FORWARD_DEPLOY_URL, "orgpage-schools"),
+      href: fdUtm(FORWARD_DEPLOY_CONTACT, "orgpage-schools"),
     },
   ];
 

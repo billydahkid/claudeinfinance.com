@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Building2, GraduationCap, ArrowUpRight } from "lucide-react";
-import { FORWARD_DEPLOY_URL } from "@/config";
+import { FORWARD_DEPLOY_CONTACT } from "@/config";
 import { fdUtm } from "@/data/offer";
 
 export default function ForOrganizations() {
@@ -12,14 +12,14 @@ export default function ForOrganizations() {
       title: t("teams.title"),
       body: t("teams.body"),
       cta: t("teams.cta"),
-      href: fdUtm(FORWARD_DEPLOY_URL, "teams"),
+      href: fdUtm(FORWARD_DEPLOY_CONTACT, "home-teams"),
     },
     {
       icon: GraduationCap,
       title: t("schools.title"),
       body: t("schools.body"),
       cta: t("schools.cta"),
-      href: fdUtm(FORWARD_DEPLOY_URL, "schools"),
+      href: fdUtm(FORWARD_DEPLOY_CONTACT, "home-schools"),
     },
   ];
 
