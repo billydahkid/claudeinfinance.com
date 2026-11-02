@@ -7,6 +7,7 @@ import {
   setRequestLocale,
 } from "next-intl/server";
 import { routing, locales } from "@/i18n/routing";
+import { SITE_URL } from "@/config";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "../globals.css";
@@ -23,8 +24,26 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
+    metadataBase: new URL(SITE_URL),
     title: t("title"),
     description: t("description"),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])),
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `/${locale}`,
+      siteName: "ClaudeInFinance",
+      locale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+    },
   };
 }
 

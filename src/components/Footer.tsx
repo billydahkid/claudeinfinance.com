@@ -1,13 +1,26 @@
-import { useLocale, useTranslations } from "next-intl";
-import { BookOpen } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { BookOpen, ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { categories } from "@/data/skills";
-import type { Locale } from "@/i18n/routing";
+import { FORWARD_DEPLOY_URL } from "@/config";
 import NewsletterSignup from "./NewsletterSignup";
 
 export default function Footer() {
   const t = useTranslations("footer");
-  const locale = useLocale() as Locale;
+
+  const explore = [
+    { href: "/formations", label: t("links.formations") },
+    { href: "/parcours", label: t("links.parcours") },
+    { href: "/skills", label: t("links.skills") },
+    { href: "/tutoriels", label: t("links.tutoriels") },
+    { href: "/projets", label: t("links.projets") },
+  ] as const;
+
+  const about = [
+    { href: "/a-propos", label: t("links.about") },
+    { href: "/mentions-legales", label: t("links.legal") },
+    { href: "/confidentialite", label: t("links.privacy") },
+    { href: "/conditions", label: t("links.terms") },
+  ] as const;
 
   return (
     <footer className="border-t border-line bg-cream-100/50">
@@ -18,12 +31,10 @@ export default function Footer() {
               <BookOpen className="h-5 w-5 text-terracotta" strokeWidth={2} />
               <span className="font-display text-lg font-semibold tracking-tight">
                 ClaudeInFinance
-                <span className="font-body italic text-terracotta">.com</span>
               </span>
             </div>
             <p className="prose-serif mt-3 max-w-sm text-sm text-ink-muted">
-              {t("tagline")} {t("editedBy")}{" "}
-              <span className="font-medium text-ink-soft">{'[""]'}</span>.
+              {t("tagline")}
             </p>
             <div className="mt-8">
               <NewsletterSignup />
@@ -33,36 +44,23 @@ export default function Footer() {
           <div>
             <h3 className="eyebrow text-ink-muted">{t("sections.explore")}</h3>
             <ul className="mt-4 space-y-2.5 text-sm text-ink-soft">
-              <li>
-                <Link href="/#skills" className="hover:text-terracotta">
-                  {t("links.skills")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/#categories" className="hover:text-terracotta">
-                  {t("links.categories")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/#about" className="hover:text-terracotta">
-                  {t("links.about")}
-                </Link>
-              </li>
+              {explore.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="hover:text-terracotta">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="eyebrow text-ink-muted">
-              {t("sections.categories")}
-            </h3>
+            <h3 className="eyebrow text-ink-muted">{t("sections.about")}</h3>
             <ul className="mt-4 space-y-2.5 text-sm text-ink-soft">
-              {categories.slice(0, 5).map((c) => (
-                <li key={c.slug}>
-                  <Link
-                    href={`/categories/${c.slug}`}
-                    className="hover:text-terracotta"
-                  >
-                    {c.name[locale]}
+              {about.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="hover:text-terracotta">
+                    {item.label}
                   </Link>
                 </li>
               ))}
@@ -70,7 +68,31 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-1 border-t border-line pt-6 font-mono text-xs text-ink-muted">
+        {/* B2B / Forward & Deploy */}
+        <div className="mt-12 flex flex-col gap-3 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <a
+            href={FORWARD_DEPLOY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wide text-ink-soft transition-colors hover:text-terracotta"
+          >
+            {t("poweredBy")}
+            <ArrowUpRight className="h-3.5 w-3.5" />
+          </a>
+          <p className="text-sm text-ink-muted">
+            {t("b2bLine")}{" "}
+            <a
+              href={FORWARD_DEPLOY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-terracotta hover:text-terracotta-dark"
+            >
+              {t("b2bCta")}
+            </a>
+          </p>
+        </div>
+
+        <div className="mt-6 flex flex-col gap-1 font-mono text-xs text-ink-muted">
           <p>{t("disclaimer")}</p>
           <p>&copy; 2026 ClaudeInFinance. {t("rights")}</p>
         </div>

@@ -1,29 +1,114 @@
 {
   "meta": {
-    "title": "ClaudeInFinance - Cas d'usage des agents IA en finance",
-    "description": "L'annuaire des skills et prompts Claude pour les metiers de la finance : M&A, private equity, venture capital, marches, controle de gestion, audit, risque et data."
+    "title": "ClaudeInFinance - Maitrisez l'IA appliquee a la finance",
+    "description": "Formations pratiques a l'IA pour les metiers de la finance. Apprenez a creer vos propres agents, automatiser vos workflows et explorer une bibliotheque de skills gratuits."
+  },
+  "common": {
+    "levels": {
+      "beginner": "Debutant",
+      "intermediate": "Intermediaire",
+      "advanced": "Avance"
+    },
+    "status": {
+      "available": "Disponible",
+      "coming-soon": "Bientot",
+      "waitlist": "Liste d'attente"
+    }
   },
   "header": {
     "brand": "ClaudeInFinance",
     "nav": {
-      "home": "Accueil",
-      "categories": "Categories",
-      "skills": "Tous les skills",
+      "formations": "Formations",
+      "parcours": "Parcours",
+      "skills": "Skills Library",
+      "tutoriels": "Tutoriels",
       "about": "A propos"
     },
-    "explore": "Explorer",
+    "login": "Connexion",
+    "cta": "Decouvrir les formations",
     "language": "Langue"
   },
   "hero": {
-    "eyebrow": "L'annuaire - edition finance",
-    "titleLine1": "Les agents Claude,",
-    "titleLine2": "au service de la finance.",
-    "subtitle": "Un annuaire de skills et de prompts prets a l'emploi pour les metiers de la finance. Trouvez le bon cas d'usage, copiez le prompt, gagnez du temps.",
-    "stats": {
-      "skills": "skills",
-      "categories": "categories",
-      "languages": "langues"
-    }
+    "eyebrow": "AI education for finance",
+    "title": "Maitrisez l'IA appliquee a la finance.",
+    "subtitle": "Apprenez a creer vos propres agents IA, automatiser vos workflows financiers et developper des competences directement applicables.",
+    "ctaPrimary": "Decouvrir les formations",
+    "ctaSecondary": "Explorer les skills gratuits",
+    "tags": ["M&A", "Private Equity", "Financial Modeling", "AI Agents", "Workflow Automation"],
+    "flow": ["Documents", "Extraction", "Analyse", "Livrable"]
+  },
+  "lba": {
+    "eyebrow": "Apprendre, construire, automatiser",
+    "title": "Trois facons de monter en competence.",
+    "learn": {
+      "title": "Apprendre les fondamentaux",
+      "body": "Comprenez les modeles d'IA, le prompting et les bons usages en finance, avec validation humaine."
+    },
+    "build": {
+      "title": "Creer vos propres agents",
+      "body": "Construisez des agents utiles pour vos taches, dans les outils que vous utilisez deja."
+    },
+    "automate": {
+      "title": "Automatiser vos workflows",
+      "body": "Reperez les taches chronophages et automatisez les de bout en bout, en gardant le controle."
+    },
+    "cta": "En savoir plus"
+  },
+  "featuredCourses": {
+    "eyebrow": "Formations",
+    "title": "Des formations pensees pour la finance.",
+    "subtitle": "Des programmes concrets, du debutant a l'avance.",
+    "viewAll": "Voir toutes les formations",
+    "levelLabel": "Niveau",
+    "detailsCta": "Voir la formation"
+  },
+  "learnByBuilding": {
+    "eyebrow": "Apprendre en construisant",
+    "title": "Vous apprenez en produisant de vrais livrables.",
+    "subtitle": "Chaque projet precise les donnees, les etapes, les livrables et les controles qualite.",
+    "projects": [
+      {
+        "title": "Analyse financiere assistee",
+        "body": "D'un jeu de donnees a une analyse claire et verifiable, avec controle des resultats."
+      },
+      {
+        "title": "Preparation d'un Investment Memorandum",
+        "body": "Structurez et redigez un memo d'investissement assiste par IA, section par section."
+      },
+      {
+        "title": "Creation d'un agent financier",
+        "body": "Construisez un agent qui automatise une tache metier, puis mesurez le gain."
+      }
+    ]
+  },
+  "skillsPreview": {
+    "eyebrow": "Skills Library",
+    "title": "Une bibliotheque de skills gratuits.",
+    "subtitle": "Des prompts et agents prets a l'emploi pour la finance. Explorez, copiez, apprenez.",
+    "viewAll": "Voir tous les skills"
+  },
+  "method": {
+    "eyebrow": "Methode pedagogique",
+    "title": "Theorie, pratique, verification.",
+    "steps": [
+      { "title": "Theorie", "body": "Les concepts cles, expliques simplement et appliques a la finance." },
+      { "title": "Demonstration", "body": "On vous montre la methode en situation reelle." },
+      { "title": "Exercice", "body": "Vous pratiquez sur des cas concrets." },
+      { "title": "Projet", "body": "Vous produisez un livrable de bout en bout." },
+      { "title": "Verification", "body": "Validation humaine, confidentialite et fiabilite des resultats." }
+    ]
+  },
+  "credibility": {
+    "eyebrow": "Notre approche",
+    "title": "Une pedagogie exigeante et honnete.",
+    "body": "ClaudeInFinance est une initiative educative. Nous enseignons a utiliser des outils tiers (Claude, Claude Code, ChatGPT, n8n, Python) avec rigueur : validation humaine, confidentialite et fiabilite d'abord. Pas de promesses exagerees, pas de chiffres non verifies.",
+    "poweredBy": "Une initiative educative soutenue par Forward & Deploy."
+  },
+  "finalCta": {
+    "title": "Apprenez a construire vos propres workflows IA.",
+    "subtitle": "Commencez par les skills gratuits, puis montez en competence avec les formations.",
+    "cta": "Decouvrir les formations",
+    "ctaSecondary": "Explorer les skills"
   },
   "categories": {
     "title": "Categories metiers",
@@ -49,6 +134,21 @@
     "resultsCount": "{count, plural, =0 {0 resultat} one {# resultat} other {# resultats}}",
     "empty": "Aucun skill ne correspond a votre recherche.",
     "reset": "Reinitialiser"
+  },
+  "courses": {
+    "breadcrumbHome": "Accueil",
+    "catalogTitle": "Catalogue de formations",
+    "catalogSubtitle": "Apprenez l'IA appliquee a la finance, du debutant a l'avance.",
+    "searchPlaceholder": "Chercher une formation...",
+    "empty": "Aucune formation ne correspond pour le moment.",
+    "outcomes": "Ce que vous saurez faire",
+    "audience": "Pour qui",
+    "tools": "Outils utilises",
+    "syllabus": "Programme",
+    "syllabusEmpty": "Le programme detaille sera publie prochainement.",
+    "waitlistCta": "Rejoindre la liste d'attente",
+    "comingSoonNote": "Cette formation est en cours de preparation. Laissez votre email pour etre prevenu de son ouverture.",
+    "backToCatalog": "Retour au catalogue"
   },
   "about": {
     "title": "A propos",
@@ -87,24 +187,32 @@
     "empty": "Aucun skill dans cette categorie pour le moment."
   },
   "footer": {
-    "tagline": "L'annuaire independant des cas d'usage des agents Claude pour la finance.",
-    "editedBy": "Edite par",
+    "tagline": "Formations pratiques a l'IA appliquee a la finance.",
+    "poweredBy": "An education initiative by Forward & Deploy",
+    "b2bLine": "Vous representez une ecole ou une entreprise ?",
+    "b2bCta": "Decouvrez Forward & Deploy",
     "newsletter": {
-      "label": "Newsletter hebdomadaire",
+      "label": "Restez informe",
       "placeholder": "vous@societe.com",
-      "subscribe": "S'abonner",
-      "hint": "Un skill decortique chaque vendredi. Desabonnement en un clic.",
+      "subscribe": "S'inscrire",
+      "hint": "Nouvelles formations et ressources. Desabonnement en un clic.",
       "success": "Merci, votre inscription est prise en compte."
     },
     "disclaimer": "Projet independant, non affilie a Anthropic. Not affiliated with Anthropic.",
     "sections": {
       "explore": "Explorer",
-      "categories": "Categories"
+      "about": "A propos"
     },
     "links": {
-      "skills": "Tous les skills",
-      "categories": "Categories",
-      "about": "A propos"
+      "formations": "Formations",
+      "parcours": "Parcours",
+      "skills": "Skills Library",
+      "tutoriels": "Tutoriels",
+      "projets": "Projets",
+      "about": "A propos",
+      "legal": "Mentions legales",
+      "privacy": "Confidentialite",
+      "terms": "CGU / CGV"
     },
     "rights": "Tous droits reserves."
   },
@@ -112,5 +220,26 @@
     "title": "Page introuvable",
     "body": "La page que vous cherchez n'existe pas ou a ete deplacee.",
     "cta": "Retour a l'accueil"
+  },
+  "placeholder": {
+    "comingSoon": "Bientot disponible",
+    "comingSoonBody": "Cette section arrive prochainement. En attendant, explorez les formations et la bibliotheque de skills.",
+    "legalBody": "Ce contenu sera publie prochainement. Pour toute question, contactez-nous.",
+    "loginBody": "Les comptes etudiants arrivent avec l'ouverture des formations. Laissez votre email pour etre prevenu.",
+    "backHome": "Retour a l'accueil",
+    "browseCourses": "Voir les formations",
+    "browseSkills": "Explorer les skills"
+  },
+  "aboutPage": {
+    "eyebrow": "A propos",
+    "title": "Apprendre l'IA appliquee a la finance, serieusement.",
+    "mission": "ClaudeInFinance est une initiative educative qui aide les etudiants et les professionnels de la finance a maitriser l'IA : creer leurs propres agents, automatiser leurs workflows et developper des competences directement applicables.",
+    "methodTitle": "Notre pedagogie",
+    "methodBody": "Theorie, demonstration, exercice, projet, verification. Nous insistons sur la validation humaine, la confidentialite et la fiabilite des resultats, parce que la finance ne tolere pas l'a-peu-pres.",
+    "toolsTitle": "Des outils tiers, pas une boite noire",
+    "toolsBody": "Nous enseignons a utiliser Claude, Claude Code, ChatGPT, n8n ou Python. Pas de runtime proprietaire : vous apprenez des competences transferables.",
+    "fdTitle": "Soutenu par Forward & Deploy",
+    "fdBody": "ClaudeInFinance est l'initiative educative de Forward & Deploy, qui accompagne entreprises, banques, fonds et ecoles sur l'IA appliquee a la finance.",
+    "fdCta": "Decouvrir Forward & Deploy"
   }
 }

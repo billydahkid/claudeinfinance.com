@@ -1,29 +1,114 @@
 {
   "meta": {
-    "title": "ClaudeInFinance - AI agent use cases for finance",
-    "description": "The directory of Claude skills and prompts for finance jobs: M&A, private equity, venture capital, markets, management control, audit, risk and data."
+    "title": "ClaudeInFinance - Master AI applied to finance",
+    "description": "Practical AI training for finance jobs. Learn to build your own agents, automate your workflows and explore a free library of skills."
+  },
+  "common": {
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "status": {
+      "available": "Available",
+      "coming-soon": "Coming soon",
+      "waitlist": "Waitlist"
+    }
   },
   "header": {
     "brand": "ClaudeInFinance",
     "nav": {
-      "home": "Home",
-      "categories": "Categories",
-      "skills": "All skills",
+      "formations": "Courses",
+      "parcours": "Paths",
+      "skills": "Skills Library",
+      "tutoriels": "Tutorials",
       "about": "About"
     },
-    "explore": "Explore",
+    "login": "Log in",
+    "cta": "Browse courses",
     "language": "Language"
   },
   "hero": {
-    "eyebrow": "The directory - finance edition",
-    "titleLine1": "Claude agents,",
-    "titleLine2": "built for finance.",
-    "subtitle": "A directory of ready to use skills and prompts for finance jobs. Find the right use case, copy the prompt, save time.",
-    "stats": {
-      "skills": "skills",
-      "categories": "categories",
-      "languages": "languages"
-    }
+    "eyebrow": "AI education for finance",
+    "title": "Master AI applied to finance.",
+    "subtitle": "Learn to build your own AI agents, automate your financial workflows and develop directly applicable skills.",
+    "ctaPrimary": "Browse courses",
+    "ctaSecondary": "Explore free skills",
+    "tags": ["M&A", "Private Equity", "Financial Modeling", "AI Agents", "Workflow Automation"],
+    "flow": ["Documents", "Extraction", "Analysis", "Deliverable"]
+  },
+  "lba": {
+    "eyebrow": "Learn, build, automate",
+    "title": "Three ways to level up.",
+    "learn": {
+      "title": "Learn the fundamentals",
+      "body": "Understand AI models, prompting and good practice in finance, with human validation."
+    },
+    "build": {
+      "title": "Build your own agents",
+      "body": "Build agents that are actually useful for your tasks, in the tools you already use."
+    },
+    "automate": {
+      "title": "Automate your workflows",
+      "body": "Spot time-consuming tasks and automate them end to end, while staying in control."
+    },
+    "cta": "Learn more"
+  },
+  "featuredCourses": {
+    "eyebrow": "Courses",
+    "title": "Courses built for finance.",
+    "subtitle": "Concrete programs, from beginner to advanced.",
+    "viewAll": "View all courses",
+    "levelLabel": "Level",
+    "detailsCta": "View course"
+  },
+  "learnByBuilding": {
+    "eyebrow": "Learn by building",
+    "title": "You learn by producing real deliverables.",
+    "subtitle": "Each project states the data, steps, deliverables and quality controls.",
+    "projects": [
+      {
+        "title": "AI-assisted financial analysis",
+        "body": "From a dataset to a clear, verifiable analysis, with result checking."
+      },
+      {
+        "title": "Preparing an Investment Memorandum",
+        "body": "Structure and write an AI-assisted investment memo, section by section."
+      },
+      {
+        "title": "Building a financial agent",
+        "body": "Build an agent that automates a business task, then measure the gain."
+      }
+    ]
+  },
+  "skillsPreview": {
+    "eyebrow": "Skills Library",
+    "title": "A free library of skills.",
+    "subtitle": "Ready-to-use prompts and agents for finance. Explore, copy, learn.",
+    "viewAll": "View all skills"
+  },
+  "method": {
+    "eyebrow": "Teaching method",
+    "title": "Theory, practice, verification.",
+    "steps": [
+      { "title": "Theory", "body": "The key concepts, explained simply and applied to finance." },
+      { "title": "Demonstration", "body": "We show you the method in a real situation." },
+      { "title": "Exercise", "body": "You practice on concrete cases." },
+      { "title": "Project", "body": "You produce an end-to-end deliverable." },
+      { "title": "Verification", "body": "Human validation, confidentiality and reliability of results." }
+    ]
+  },
+  "credibility": {
+    "eyebrow": "Our approach",
+    "title": "Rigorous, honest teaching.",
+    "body": "ClaudeInFinance is an education initiative. We teach how to use third-party tools (Claude, Claude Code, ChatGPT, n8n, Python) with rigor: human validation, confidentiality and reliability first. No overblown promises, no unverified numbers.",
+    "poweredBy": "An education initiative powered by Forward & Deploy."
+  },
+  "finalCta": {
+    "title": "Learn to build your own AI workflows.",
+    "subtitle": "Start with the free skills, then level up with the courses.",
+    "cta": "Browse courses",
+    "ctaSecondary": "Explore skills"
   },
   "categories": {
     "title": "Job categories",
@@ -49,6 +134,21 @@
     "resultsCount": "{count, plural, =0 {0 results} one {# result} other {# results}}",
     "empty": "No skill matches your search.",
     "reset": "Reset"
+  },
+  "courses": {
+    "breadcrumbHome": "Home",
+    "catalogTitle": "Course catalog",
+    "catalogSubtitle": "Learn AI applied to finance, from beginner to advanced.",
+    "searchPlaceholder": "Search a course...",
+    "empty": "No course matches for now.",
+    "outcomes": "What you will be able to do",
+    "audience": "Who it is for",
+    "tools": "Tools used",
+    "syllabus": "Syllabus",
+    "syllabusEmpty": "The detailed syllabus will be published soon.",
+    "waitlistCta": "Join the waitlist",
+    "comingSoonNote": "This course is being prepared. Leave your email to be notified when it opens.",
+    "backToCatalog": "Back to catalog"
   },
   "about": {
     "title": "About",
@@ -87,24 +187,32 @@
     "empty": "No skill in this category yet."
   },
   "footer": {
-    "tagline": "The independent directory of Claude agent use cases for finance.",
-    "editedBy": "Edited by",
+    "tagline": "Practical training in AI applied to finance.",
+    "poweredBy": "An education initiative by Forward & Deploy",
+    "b2bLine": "Represent a school or a company?",
+    "b2bCta": "Discover Forward & Deploy",
     "newsletter": {
-      "label": "Weekly newsletter",
+      "label": "Stay in the loop",
       "placeholder": "you@company.com",
-      "subscribe": "Subscribe",
-      "hint": "One skill unpacked every Friday. Unsubscribe in one click.",
+      "subscribe": "Sign up",
+      "hint": "New courses and resources. Unsubscribe in one click.",
       "success": "Thanks, your subscription has been recorded."
     },
     "disclaimer": "Independent project, not affiliated with Anthropic. Not affiliated with Anthropic.",
     "sections": {
       "explore": "Explore",
-      "categories": "Categories"
+      "about": "About"
     },
     "links": {
-      "skills": "All skills",
-      "categories": "Categories",
-      "about": "About"
+      "formations": "Courses",
+      "parcours": "Paths",
+      "skills": "Skills Library",
+      "tutoriels": "Tutorials",
+      "projets": "Projects",
+      "about": "About",
+      "legal": "Legal notice",
+      "privacy": "Privacy",
+      "terms": "Terms"
     },
     "rights": "All rights reserved."
   },
@@ -112,5 +220,26 @@
     "title": "Page not found",
     "body": "The page you are looking for does not exist or has been moved.",
     "cta": "Back to home"
+  },
+  "placeholder": {
+    "comingSoon": "Coming soon",
+    "comingSoonBody": "This section is on its way. In the meantime, explore the courses and the skills library.",
+    "legalBody": "This content will be published soon. For any question, contact us.",
+    "loginBody": "Student accounts arrive with the course launch. Leave your email to be notified.",
+    "backHome": "Back to home",
+    "browseCourses": "View courses",
+    "browseSkills": "Explore skills"
+  },
+  "aboutPage": {
+    "eyebrow": "About",
+    "title": "Learn AI applied to finance, seriously.",
+    "mission": "ClaudeInFinance is an education initiative that helps finance students and professionals master AI: build their own agents, automate their workflows and develop directly applicable skills.",
+    "methodTitle": "Our teaching method",
+    "methodBody": "Theory, demonstration, exercise, project, verification. We insist on human validation, confidentiality and reliability of results, because finance does not tolerate guesswork.",
+    "toolsTitle": "Third-party tools, not a black box",
+    "toolsBody": "We teach how to use Claude, Claude Code, ChatGPT, n8n or Python. No proprietary runtime: you learn transferable skills.",
+    "fdTitle": "Powered by Forward & Deploy",
+    "fdBody": "ClaudeInFinance is the education initiative of Forward & Deploy, which supports companies, banks, funds and schools on AI applied to finance.",
+    "fdCta": "Discover Forward & Deploy"
   }
 }

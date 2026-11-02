@@ -1,10 +1,12 @@
 import { setRequestLocale } from "next-intl/server";
 import Hero from "@/components/Hero";
-import CategoryGrid from "@/components/CategoryGrid";
-import FeaturedSkills from "@/components/FeaturedSkills";
-import OfficialSkills from "@/components/OfficialSkills";
-import SkillExplorer from "@/components/SkillExplorer";
-import About from "@/components/About";
+import LearnBuildAutomate from "@/components/LearnBuildAutomate";
+import FeaturedCourses from "@/components/FeaturedCourses";
+import LearnByBuilding from "@/components/LearnByBuilding";
+import SkillsPreview from "@/components/SkillsPreview";
+import Method from "@/components/Method";
+import Credibility from "@/components/Credibility";
+import FinalCta from "@/components/FinalCta";
 
 export default async function HomePage({
   params,
@@ -17,11 +19,13 @@ export default async function HomePage({
   return (
     <>
       <Hero />
-      <SkillExplorer />
-      <OfficialSkills />
-      <CategoryGrid />
-      <FeaturedSkills />
-      <About />
+      <LearnBuildAutomate />
+      <FeaturedCourses />
+      <LearnByBuilding />
+      <SkillsPreview />
+      <Method />
+      <Credibility />
+      <FinalCta />
     </>
   );
 }
