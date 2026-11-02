@@ -4,7 +4,7 @@ type Props = {
   className?: string;
 };
 
-/** Brand mark: two overlapping rounded cards (beige behind, orange in front). */
+/** Brand mark: three overlapping rounded cards (faint + beige behind, orange in front). */
 export function LogoMark({ className }: { className?: string }) {
   return (
     <svg
@@ -14,19 +14,28 @@ export function LogoMark({ className }: { className?: string }) {
       aria-hidden="true"
     >
       <rect
-        x="3"
-        y="12"
-        width="18"
-        height="12"
-        rx="3"
+        x="2"
+        y="14.5"
+        width="15"
+        height="11"
+        rx="2.6"
+        className="fill-cream-200"
+        fillOpacity="0.55"
+      />
+      <rect
+        x="7.5"
+        y="10.5"
+        width="16"
+        height="11.5"
+        rx="2.9"
         className="fill-cream-200"
       />
       <rect
-        x="11"
-        y="7"
-        width="18"
-        height="13"
-        rx="3.5"
+        x="13"
+        y="6.5"
+        width="17"
+        height="12"
+        rx="3.2"
         className="fill-terracotta"
       />
     </svg>
