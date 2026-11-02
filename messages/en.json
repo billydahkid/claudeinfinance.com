@@ -22,6 +22,7 @@
       "parcours": "Paths",
       "skills": "Skills Library",
       "tutoriels": "Tutorials",
+      "organisations": "For organizations",
       "about": "About"
     },
     "login": "Log in",
@@ -29,13 +30,19 @@
     "language": "Language"
   },
   "hero": {
-    "eyebrow": "AI education for finance",
-    "title": "Master AI applied to finance.",
-    "subtitle": "Learn to build your own AI agents, automate your financial workflows and develop directly applicable skills.",
+    "eyebrow": "Practical AI training for finance",
+    "title": "Learn AI. Build Agents. Automate Finance.",
+    "subtitle": "Practical courses to master AI tools, design your own agents and automate financial workflows. Learn at your own pace, ship projects and earn a certificate after evaluation.",
     "ctaPrimary": "Browse courses",
     "ctaSecondary": "Explore free skills",
+    "microcopy": "One-time payment - 12 months of access - 12-week certifying path",
     "tags": ["M&A", "Private Equity", "Financial Modeling", "AI Agents", "Workflow Automation"],
-    "flow": ["Documents", "Extraction", "Analysis", "Deliverable"]
+    "flow": ["Documents", "Extraction", "Analysis", "Deliverable"],
+    "video": {
+      "label": "See what you'll learn",
+      "badge": "45 sec",
+      "comingSoon": "Video coming soon"
+    }
   },
   "lba": {
     "eyebrow": "Learn, build, automate",
@@ -109,6 +116,110 @@
     "subtitle": "Start with the free skills, then level up with the courses.",
     "cta": "Browse courses",
     "ctaSecondary": "Explore skills"
+  },
+  "whatYouBuild": {
+    "eyebrow": "What you'll build",
+    "title": "Concrete deliverables, not theory.",
+    "subtitle": "Each course has you ship a reusable agent or workflow. The previews below are examples.",
+    "exampleBadge": "Example",
+    "cards": [
+      {
+        "title": "Financial analysis agent",
+        "context": "From a set of documents to a reliable summary.",
+        "steps": ["Documents", "Extraction", "Checks", "Summary"],
+        "deliverable": "A verifiable analysis note",
+        "level": "Beginner"
+      },
+      {
+        "title": "Investment Memorandum automation",
+        "context": "Prepare an AI-assisted IM, with human validation.",
+        "steps": ["Gather", "Draft", "Verify", "Format"],
+        "deliverable": "A structured IM, ready to review",
+        "level": "Intermediate"
+      },
+      {
+        "title": "PE screening workflow",
+        "context": "From investment criteria to a screening note.",
+        "steps": ["Criteria", "Research", "Scoring", "Note"],
+        "deliverable": "A scored, annotated short-list",
+        "level": "Advanced"
+      }
+    ]
+  },
+  "certification": {
+    "eyebrow": "Certification",
+    "title": "Learn, build, get evaluated, get certified.",
+    "steps": [
+      { "title": "Learn", "body": "The concepts and tools, applied to finance." },
+      { "title": "Build", "body": "You ship a practical, end-to-end project." },
+      { "title": "Get evaluated", "body": "Your project is assessed against public criteria." },
+      { "title": "Get certified", "body": "A verifiable certificate after you pass the evaluation." }
+    ],
+    "accessNote": "Recommended 12-week path. 12 months of learning access from purchase.",
+    "disclaimer": "The certificate attests to passing a practical evaluation. No external recognition or accreditation is claimed.",
+    "learnMore": "How certification works"
+  },
+  "pricing": {
+    "eyebrow": "Access and certification",
+    "title": "One payment, clear access.",
+    "terms": [
+      "One-time payment, no subscription",
+      "12 months of access to paid content",
+      "Certificate issued after evaluation",
+      "Your certificates remain available after expiry"
+    ],
+    "note": "Prices will be shown when courses open. No lifetime access, no automatic certificate on purchase.",
+    "cta": "View courses"
+  },
+  "organizations": {
+    "eyebrow": "For organizations",
+    "title": "Training a team or students?",
+    "subtitle": "Company and institution offers are handled by Forward & Deploy.",
+    "teams": {
+      "title": "Train your teams",
+      "body": "Banks, funds and finance teams: upskill your people on applied AI.",
+      "cta": "Discover the company offer"
+    },
+    "schools": {
+      "title": "Train your students",
+      "body": "Schools and universities: white-label access to the course catalog.",
+      "cta": "Discover the institution offer"
+    }
+  },
+  "faq": {
+    "eyebrow": "Frequently asked questions",
+    "title": "Everything you need before you start.",
+    "items": [
+      { "q": "Do I need to code?", "a": "Not for the fundamentals. Advanced paths introduce tools like Claude Code, n8n or Python, step by step." },
+      { "q": "What tools do I need?", "a": "Accessible third-party tools (Claude, ChatGPT, n8n, Python). We guide you to set them up." },
+      { "q": "How long do I have access?", "a": "12 months of access to paid content from purchase, with no subscription." },
+      { "q": "How does the certificate work?", "a": "It is issued after passing a practical evaluation. It is verifiable, with no claim of external accreditation." },
+      { "q": "Are the courses available?", "a": "They open progressively. You can join the waitlist to be notified." },
+      { "q": "Is ClaudeInFinance affiliated with Anthropic?", "a": "No. ClaudeInFinance is an independent project. Claude is a trademark of Anthropic." }
+    ]
+  },
+  "certificationPage": {
+    "eyebrow": "Certification",
+    "title": "How certification works.",
+    "intro": "Our certification attests to a practical skill, demonstrated through an evaluated project. It claims no external recognition or accreditation.",
+    "stepsTitle": "The path",
+    "criteriaTitle": "Evaluation criteria",
+    "criteriaBody": "Criteria are public and cover the quality of the deliverable, the rigor of the checks and the relevance of the choices. The precise rules (attempts, retakes, deadlines) will be published at launch.",
+    "validityTitle": "Validity and verification",
+    "validityBody": "Each certificate is verifiable via a public link that exposes only the necessary information. Learning access lasts 12 months; earned certificates remain available beyond that.",
+    "backCta": "View courses"
+  },
+  "organisationsPage": {
+    "eyebrow": "For organizations",
+    "title": "Train your teams or your students.",
+    "intro": "ClaudeInFinance is the B2C platform. Company and institution offers are run by Forward & Deploy. Pick your profile below.",
+    "teamsTitle": "Financial institutions",
+    "teamsBody": "Banks, funds, M&A, PE, TS teams: train your people on AI applied to finance.",
+    "teamsCta": "Talk to Forward & Deploy",
+    "schoolsTitle": "Educational institutions",
+    "schoolsBody": "Schools and universities: offer the catalog white-labeled, with student accounts and tracking.",
+    "schoolsCta": "Discover white label",
+    "note": "You will be redirected to forwardanddeploy.com. ClaudeInFinance does not host a B2B form."
   },
   "categories": {
     "title": "Job categories",
@@ -212,7 +323,9 @@
       "about": "About",
       "legal": "Legal notice",
       "privacy": "Privacy",
-      "terms": "Terms"
+      "terms": "Terms",
+      "cookies": "Cookies",
+      "contact": "Contact"
     },
     "rights": "All rights reserved."
   },

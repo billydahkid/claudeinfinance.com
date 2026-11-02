@@ -17,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/skills",
     ...skills.map((s) => `/skills/${s.slug}`),
     ...categories.map((c) => `/categories/${c.slug}`),
+    "/certification",
+    "/organisations",
     "/a-propos",
   ];
 

@@ -22,6 +22,7 @@
       "parcours": "Parcours",
       "skills": "Skills Library",
       "tutoriels": "Tutoriels",
+      "organisations": "Pour les organisations",
       "about": "A propos"
     },
     "login": "Connexion",
@@ -29,13 +30,19 @@
     "language": "Langue"
   },
   "hero": {
-    "eyebrow": "AI education for finance",
-    "title": "Maitrisez l'IA appliquee a la finance.",
-    "subtitle": "Apprenez a creer vos propres agents IA, automatiser vos workflows financiers et developper des competences directement applicables.",
+    "eyebrow": "Formations pratiques en IA pour la finance",
+    "title": "Apprenez l'IA. Creez vos agents. Automatisez la finance.",
+    "subtitle": "Des formations pratiques pour maitriser les outils d'IA, concevoir vos propres agents et automatiser des workflows financiers. Apprenez a votre rythme, realisez des projets et obtenez un certificat apres evaluation.",
     "ctaPrimary": "Decouvrir les formations",
     "ctaSecondary": "Explorer les skills gratuits",
+    "microcopy": "Paiement unique - 12 mois d'acces - Parcours certifiant de 12 semaines",
     "tags": ["M&A", "Private Equity", "Financial Modeling", "AI Agents", "Workflow Automation"],
-    "flow": ["Documents", "Extraction", "Analyse", "Livrable"]
+    "flow": ["Documents", "Extraction", "Analyse", "Livrable"],
+    "video": {
+      "label": "Voir ce que vous allez apprendre",
+      "badge": "45 sec",
+      "comingSoon": "Video bientot disponible"
+    }
   },
   "lba": {
     "eyebrow": "Apprendre, construire, automatiser",
@@ -109,6 +116,110 @@
     "subtitle": "Commencez par les skills gratuits, puis montez en competence avec les formations.",
     "cta": "Decouvrir les formations",
     "ctaSecondary": "Explorer les skills"
+  },
+  "whatYouBuild": {
+    "eyebrow": "Ce que vous allez construire",
+    "title": "Des livrables concrets, pas de la theorie.",
+    "subtitle": "Chaque formation vous fait produire un agent ou un workflow reutilisable. Les apercus ci-dessous sont des exemples.",
+    "exampleBadge": "Exemple",
+    "cards": [
+      {
+        "title": "Agent d'analyse financiere",
+        "context": "D'un jeu de documents a une synthese fiable.",
+        "steps": ["Documents", "Extraction", "Controles", "Synthese"],
+        "deliverable": "Une note d'analyse verifiable",
+        "level": "Debutant"
+      },
+      {
+        "title": "Automatisation d'Investment Memorandum",
+        "context": "Preparer un IM assiste par IA, avec validation humaine.",
+        "steps": ["Collecte", "Redaction", "Verification", "Mise en forme"],
+        "deliverable": "Un IM structure, pret a revoir",
+        "level": "Intermediaire"
+      },
+      {
+        "title": "Workflow de screening PE",
+        "context": "Du criteres d'investissement a une note de screening.",
+        "steps": ["Criteres", "Recherche", "Scoring", "Note"],
+        "deliverable": "Une short-list scoree et commentee",
+        "level": "Avance"
+      }
+    ]
+  },
+  "certification": {
+    "eyebrow": "La certification",
+    "title": "Apprendre, construire, faire evaluer, etre certifie.",
+    "steps": [
+      { "title": "Apprendre", "body": "Les concepts et les outils, appliques a la finance." },
+      { "title": "Construire", "body": "Vous realisez un projet pratique de bout en bout." },
+      { "title": "Faire evaluer", "body": "Votre projet est evalue selon des criteres publics." },
+      { "title": "Etre certifie", "body": "Un certificat verifiable apres reussite de l'evaluation." }
+    ],
+    "accessNote": "Parcours conseille sur 12 semaines. Acces pedagogique 12 mois a partir de l'achat.",
+    "disclaimer": "Le certificat atteste de la reussite d'une evaluation pratique. Aucune reconnaissance ou accreditation externe n'est revendiquee.",
+    "learnMore": "Comment fonctionne la certification"
+  },
+  "pricing": {
+    "eyebrow": "Acces et certification",
+    "title": "Un paiement unique, un acces clair.",
+    "terms": [
+      "Paiement unique, sans abonnement",
+      "12 mois d'acces aux contenus payants",
+      "Certificat delivre apres evaluation",
+      "Vos certificats restent conservables apres expiration"
+    ],
+    "note": "Les tarifs seront affiches a l'ouverture des formations. Pas d'acces a vie, pas de certificat automatique a l'achat.",
+    "cta": "Voir les formations"
+  },
+  "organizations": {
+    "eyebrow": "Pour les organisations",
+    "title": "Former une equipe ou des etudiants ?",
+    "subtitle": "Les offres entreprises et etablissements sont gerees par Forward & Deploy.",
+    "teams": {
+      "title": "Former vos equipes",
+      "body": "Banques, fonds et equipes finance : montez vos equipes en competence sur l'IA appliquee.",
+      "cta": "Decouvrir l'offre entreprises"
+    },
+    "schools": {
+      "title": "Former vos etudiants",
+      "body": "Ecoles et universites : acces en marque blanche au catalogue de formations.",
+      "cta": "Decouvrir l'offre etablissements"
+    }
+  },
+  "faq": {
+    "eyebrow": "Questions frequentes",
+    "title": "Tout ce qu'il faut savoir avant de commencer.",
+    "items": [
+      { "q": "Faut-il savoir coder ?", "a": "Non pour les fondamentaux. Les parcours avances introduisent des outils comme Claude Code, n8n ou Python, pas a pas." },
+      { "q": "De quels outils ai-je besoin ?", "a": "Des outils tiers accessibles (Claude, ChatGPT, n8n, Python). Nous vous guidons pour les mettre en place." },
+      { "q": "Combien de temps ai-je acces ?", "a": "12 mois d'acces aux contenus payants a partir de l'achat, sans abonnement." },
+      { "q": "Comment fonctionne le certificat ?", "a": "Il est delivre apres la reussite d'une evaluation pratique. Il est verifiable, sans pretention d'accreditation externe." },
+      { "q": "Les formations sont-elles disponibles ?", "a": "Elles ouvrent progressivement. Vous pouvez rejoindre la liste d'attente pour etre prevenu." },
+      { "q": "ClaudeInFinance est-il affilie a Anthropic ?", "a": "Non. ClaudeInFinance est un projet independant. Claude est une marque d'Anthropic." }
+    ]
+  },
+  "certificationPage": {
+    "eyebrow": "La certification",
+    "title": "Comment fonctionne la certification.",
+    "intro": "Notre certification atteste d'une competence pratique, demontree par un projet evalue. Elle ne revendique aucune reconnaissance ou accreditation externe.",
+    "stepsTitle": "Le parcours",
+    "criteriaTitle": "Les criteres d'evaluation",
+    "criteriaBody": "Les criteres sont publics et portent sur la qualite du livrable, la rigueur du controle et la pertinence des choix. Les modalites precises (tentatives, rattrapages, delais) seront publiees a l'ouverture.",
+    "validityTitle": "Validite et verification",
+    "validityBody": "Chaque certificat est verifiable via un lien public qui n'expose que les informations necessaires. L'acces pedagogique dure 12 mois ; les certificats obtenus restent conservables au-dela.",
+    "backCta": "Voir les formations"
+  },
+  "organisationsPage": {
+    "eyebrow": "Pour les organisations",
+    "title": "Former vos equipes ou vos etudiants.",
+    "intro": "ClaudeInFinance est la plateforme B2C. Les offres entreprises et etablissements sont operees par Forward & Deploy. Choisissez votre profil ci-dessous.",
+    "teamsTitle": "Institutions financieres",
+    "teamsBody": "Banques, fonds, equipes M&A, PE, TS : formez vos equipes a l'IA appliquee a la finance.",
+    "teamsCta": "Parler a Forward & Deploy",
+    "schoolsTitle": "Etablissements d'enseignement",
+    "schoolsBody": "Ecoles et universites : offrez le catalogue en marque blanche, avec comptes etudiants et suivi.",
+    "schoolsCta": "Decouvrir le white label",
+    "note": "Vous serez redirige vers forwardanddeploy.com. ClaudeInFinance n'heberge pas de formulaire B2B."
   },
   "categories": {
     "title": "Categories metiers",
@@ -212,7 +323,9 @@
       "about": "A propos",
       "legal": "Mentions legales",
       "privacy": "Confidentialite",
-      "terms": "CGU / CGV"
+      "terms": "CGV",
+      "cookies": "Cookies",
+      "contact": "Contact"
     },
     "rights": "Tous droits reserves."
   },

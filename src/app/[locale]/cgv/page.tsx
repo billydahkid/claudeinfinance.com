@@ -12,7 +12,7 @@ export async function generateMetadata({
   return { title: `${t("links.terms")} - ClaudeInFinance`, robots: { index: false } };
 }
 
-export default async function ConditionsPage({
+export default async function CgvPage({
   params,
 }: {
   params: Promise<{ locale: string }>;

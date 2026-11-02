@@ -10,7 +10,7 @@ export default function Header() {
     { href: "/formations", label: t("nav.formations") },
     { href: "/parcours", label: t("nav.parcours") },
     { href: "/skills", label: t("nav.skills") },
-    { href: "/tutoriels", label: t("nav.tutoriels") },
+    { href: "/organisations", label: t("nav.organisations") },
     { href: "/a-propos", label: t("nav.about") },
   ] as const;
 

@@ -19,7 +19,9 @@ export default function Footer() {
     { href: "/a-propos", label: t("links.about") },
     { href: "/mentions-legales", label: t("links.legal") },
     { href: "/confidentialite", label: t("links.privacy") },
-    { href: "/conditions", label: t("links.terms") },
+    { href: "/cgv", label: t("links.terms") },
+    { href: "/cookies", label: t("links.cookies") },
+    { href: "/contact", label: t("links.contact") },
   ] as const;
 
   return (
